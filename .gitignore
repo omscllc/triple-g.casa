@@ -26,12 +26,14 @@
 /web/vendor
 /web/core
 /web/modules/README.txt
+/web/modules/contrib
 /web/profiles/README.txt
 /web/sites/development.services.yml
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
 /web/sites/README.txt
 /web/themes/README.txt
+/web/themes/contrib
 /web/.csslintrc
 /web/.editorconfig
 /web/.eslintignore
@@ -40,8 +42,6 @@
 /web/.htaccess
 /web/.ht.router.php
 /web/autoload.php
-/web/composer.json
-/web/composer.lock
 /web/example.gitignore
 /web/index.php
 /web/INSTALL.txt
@@ -227,3 +227,10 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
+/recipes/README.txt
+/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
+/.idea/commandlinetools/Drush_7_4_25__5_06_PM.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/php.xml
+/.idea/phpunit.xml
+/.idea/vcs.xml
