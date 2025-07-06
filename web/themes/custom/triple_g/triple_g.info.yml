@@ -1,0 +1,24 @@
+name: 'Geeks, Gadgets and Gizmos Theme'
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - triple_g/base
+  - triple_g/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - triple_g/user
+  core/drupal.dropbutton:
+    - triple_g/dropbutton
+  core/drupal.dialog:
+    - triple_g/dialog
+  file/drupal.file:
+    - triple_g/file
+  core/drupal.progress:
+    - triple_g/progress
+  core/drupal.tablesort:
+    - triple_g/drupal.tablesort
+description: 'Theme for Geeks, Gadgets and Gizmos'
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.2.2'
