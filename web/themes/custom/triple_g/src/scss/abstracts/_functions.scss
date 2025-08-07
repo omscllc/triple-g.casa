@@ -1,0 +1,70 @@
+// =============================================================================
+// FUNCTIONS
+// =============================================================================
+//
+// This file contains all application-wide Sass functions.
+// =============================================================================
+
+/// Convert a pixel value to rem
+/// @param {Number} $px - The pixel value to convert
+/// @return {Number} The converted value in rem
+@function px-to-rem($px) {
+  $root-font-size: 16px;
+  @return ($px / $root-font-size) * 1rem;
+}
+
+/// Convert a pixel value to em
+/// @param {Number} $px - The pixel value to convert
+/// @param {Number} $base-font-size - The base font size to use for conversion
+/// @return {Number} The converted value in em
+@function px-to-em($px, $base-font-size: 16px) {
+  @return ($px / $base-font-size) * 1em;
+}
+
+/// Get a z-index value from a list of named layers
+/// @param {String} $layer - The name of the z-index layer
+/// @return {Number} The z-index value
+@function z($layer) {
+  $z-layers: (
+    "modal": $zindex-modal,
+    "popover": $zindex-popover,
+    "tooltip": $zindex-tooltip,
+    "fixed": $zindex-fixed,
+    "sticky": $zindex-sticky,
+    "dropdown": $zindex-dropdown
+  );
+
+  @if map-has-key($z-layers, $layer) {
+    @return map-get($z-layers, $layer);
+  }
+
+  @warn "No z-index found for `#{$layer}` in $z-layers map. Property omitted.";
+  @return null;
+}
+
+/// Get a color value from the color palette
+/// @param {String} $color - The base color name
+/// @param {String} $variant [null] - The variant (light, dark)
+/// @return {Color} The color value
+@function color($color, $variant: null) {
+  @if $variant == "light" {
+    @if variable-exists("#{$color}-light") {
+      @return var(--#{$color}-light);
+    }
+    @return tint-color(var(--#{$color}), 37%);
+  }
+
+  @if $variant == "dark" {
+    @if variable-exists("#{$color}-dark") {
+      @return var(--#{$color}-dark);
+    }
+    @return shade-color(var(--#{$color}), 12%);
+  }
+
+  @if variable-exists($color) {
+    @return var(--#{$color});
+  }
+
+  @warn "Color `#{$color}` not found in color palette.";
+  @return null;
+}

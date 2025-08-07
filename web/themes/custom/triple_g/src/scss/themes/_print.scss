@@ -1,0 +1,123 @@
+// =============================================================================
+// PRINT STYLES
+// =============================================================================
+//
+// This file contains print-specific styles.
+// =============================================================================
+
+@media print {
+  // Hide elements that are not needed in print
+  .header__navigation,
+  .footer,
+  .sidebar,
+  .comments,
+  .social-sharing,
+  button:not(.print-button),
+  .nav-tabs,
+  .breadcrumb,
+  .pagination,
+  .search-form,
+  .back-to-top {
+    display: none !important;
+  }
+
+  // Ensure the content is visible
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  // Ensure links are visible
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+
+    // Show URL after links
+    &[href^="http"]:after {
+      content: " (" attr(href) ")";
+      font-size: 10pt;
+      font-style: italic;
+    }
+
+    // Don't show URL for internal links
+    &[href^="#"]:after,
+    &[href^="javascript:"]:after {
+      content: "";
+    }
+  }
+
+  // Ensure headings are visible
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    color: #000 !important;
+  }
+
+  // Ensure images are visible
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  // Ensure tables are visible
+  table {
+    border-collapse: collapse !important;
+
+    td, th {
+      background-color: #fff !important;
+      border: 1px solid #000 !important;
+    }
+  }
+
+  // Ensure pre and blockquote are visible
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  // Ensure page breaks are handled properly
+  .page-break {
+    page-break-before: always;
+  }
+
+  // Ensure container is full width
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  // Ensure columns are full width
+  .col, [class^="col-"] {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  // Add header and footer for printed pages
+  @page {
+    margin: 2cm;
+  }
+
+  // Ensure proper display of the main content
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  // Show the site logo and name at the top of each page
+  .triple-g__logo {
+    display: block;
+    max-width: 100px;
+    margin-bottom: 1cm;
+  }
+
+  .triple-g__site-name {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 0.5cm;
+  }
+}

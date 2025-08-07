@@ -1,24 +1,38 @@
-name: 'Geeks, Gadgets and Gizmos Theme'
+name: Geeks, Gadgets and Gizmos theme
+description: 'The Geeks, Gadgets and Gizmos theme theme is built on the foundation of FlexiStyle Bootstrap, providing the same compatibility and features, with added support for SCSS for more efficient styling.'
 type: theme
-'base theme': stable9
-version: 1.0.0
+base theme: flexistyle_bootstrap
+core_version_requirement: ^9 || ^10 || ^11
+logo: logo.png
+
 libraries:
-  - triple_g/base
-  - triple_g/messages
-  - core/normalize
-libraries-extend:
-  user/drupal.user:
-    - triple_g/user
-  core/drupal.dropbutton:
-    - triple_g/dropbutton
-  core/drupal.dialog:
-    - triple_g/dialog
-  file/drupal.file:
-    - triple_g/file
-  core/drupal.progress:
-    - triple_g/progress
-  core/drupal.tablesort:
-    - triple_g/drupal.tablesort
-description: 'Theme for Geeks, Gadgets and Gizmos'
-core_version_requirement: ^11
-generator: 'starterkit_theme:11.2.2'
+  - triple_g/global
+
+regions:
+  secondary_menu: 'Secondary menu'
+  header: 'Header'
+  search: 'Search'
+  primary_menu: 'Primary menu'
+  banner: 'Banner'
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  content_bottom: 'Content Bottom'
+  featured_bottom: 'Featured Bottom'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_fourth: 'Footer Fourth'
+  footer: 'Footer'
+
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+# Information added by Drupal.org packaging script on 2024-09-05
+version: '1.0.8'
+project: 'triple_g'
+datestamp: 1725535225

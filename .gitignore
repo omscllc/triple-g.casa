@@ -232,6 +232,14 @@ GitHub.sublime-settings
 /.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
 /.idea/commandlinetools/Drush_7_4_25__5_06_PM.xml
 /.idea/inspectionProfiles/Project_Default.xml
+
+### Crush
+# Ignore Crush files and directories
+/.crush
+.crush
+crush
+CRUSH.md
+
 /.idea/php.xml
 /.idea/phpunit.xml
 /.idea/vcs.xml

@@ -1,0 +1,40 @@
+// =============================================================================
+// GRID LAYOUT
+// =============================================================================
+//
+// This file contains grid layout styles.
+// =============================================================================
+
+// Container
+.container {
+  @extend %responsive-container;
+}
+
+// Row
+.row {
+  @include flex-container(row, wrap, flex-start, stretch);
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+// Columns
+.col {
+  @include flex-item(1, 0, 0%);
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100%;
+}
+
+// Triple-G column
+.triple-g {
+  &__column {
+    @extend %triple-g-column;
+    @extend %card-shadow;
+    @extend %transition;
+    padding: $spacer;
+
+    &:hover {
+      @extend %hover-shadow;
+    }
+  }
+}

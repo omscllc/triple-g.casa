@@ -1,0 +1,95 @@
+// =============================================================================
+// FOOTER COMPONENT
+// =============================================================================
+//
+// This file contains styles for the footer component.
+// =============================================================================
+
+.footer {
+  padding: $spacer * 2 0;
+  background-color: $gray-800;
+  color: $white;
+  margin-top: $spacer * 3;
+
+  @include respond-to('md') {
+    padding: $spacer * 3 0;
+  }
+
+  // Footer columns
+  &__columns {
+    @include flex-container(row, wrap, space-between, flex-start);
+    gap: $spacer * 2;
+  }
+
+  &__column {
+    @include flex-item(1, 1, 100%);
+
+    @include respond-to('md') {
+      @include flex-item(1, 1, calc(50% - #{$spacer}));
+    }
+
+    @include respond-to('lg') {
+      @include flex-item(1, 1, calc(25% - #{$spacer * 1.5}));
+    }
+  }
+
+  // Footer headings
+  &__heading {
+    color: $white;
+    font-size: $font-size-base * 1.25;
+    margin-bottom: $spacer;
+    padding-bottom: $spacer * 0.5;
+    border-bottom: 1px solid rgba($white, 0.2);
+  }
+
+  // Footer links
+  &__links {
+    @extend %list-reset;
+
+    li {
+      margin-bottom: $spacer * 0.5;
+    }
+
+    a {
+      color: $gray-300;
+      @extend %transition;
+
+      &:hover, &:focus {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Footer bottom
+  &__bottom {
+    margin-top: $spacer * 2;
+    padding-top: $spacer;
+    border-top: 1px solid rgba($white, 0.1);
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $gray-400;
+  }
+
+  // Copyright
+  &__copyright {
+    margin-bottom: $spacer * 0.5;
+  }
+
+  // Social links
+  &__social {
+    @extend %list-reset;
+    @include flex-container(row, wrap, center, center);
+    gap: $spacer;
+
+    a {
+      color: $gray-400;
+      font-size: $font-size-lg;
+      @extend %transition;
+
+      &:hover, &:focus {
+        color: $white;
+      }
+    }
+  }
+}

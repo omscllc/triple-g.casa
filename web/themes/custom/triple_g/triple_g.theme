@@ -2,20 +2,7 @@
 
 /**
  * @file
- * Functions to support theming.
+ * Functions to support theming in the FlexiStyle Bootstrap SCSS theme.
  */
 
-/**
- * Implements hook_preprocess_image_widget().
- */
-function triple_g_preprocess_image_widget(array &$variables): void {
-  $data = &$variables['data'];
-
-  // This prevents image widget templates from rendering preview container HTML
-  // to users that do not have permission to access these previews.
-  // @todo revisit in https://drupal.org/node/953034
-  // @todo revisit in https://drupal.org/node/3114318
-  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
-    unset($data['preview']);
-  }
-}
+declare(strict_types=1);

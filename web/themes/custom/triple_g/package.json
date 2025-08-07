@@ -1,32 +1,44 @@
 {
   "name": "triple_g",
-  "version": "1.0.0",
-  "description": "Geeks, Gadgets and Gizmos theme",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
+  "private": true,
   "main": "index.js",
-  "browserslist": [
-    "last 5 versions"
-  ],
+  "description": "The FlexiStyle Bootstrap SCSS theme is built on the foundation of FlexiStyle Bootstrap, providing the same compatibility and features, with added support for SCSS for more efficient styling.",
   "scripts": {
+    "css": "sass --style=expanded --source-map --embed-sources --load-path=node_modules src/scss/style.scss:css/style.css",
+    "css:watch": "sass --watch --style=expanded --source-map --embed-sources --load-path=node_modules src/scss/style.scss:css/style.css",
+    "postcss": "postcss css/style.css --config postcss.config.js --map --output css/style.css",
+    "css:minify": "cleancss -o css/style.min.css css/style.css --source-map",
+    "js": "cp src/js/global.js js/",
+    "build": "npm run css && npm run postcss && npm run css:minify && npm run js",
+    "watch": "npm-run-all --parallel css:watch serve",
+    "serve": "browser-sync start --proxy 'http://localhost:8888' --files 'css/*.css, js/*.js, **/*.twig' --no-open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@rspack/cli": "^1.4.3",
-    "@rspack/core": "^1.4.3",
-    "gulp": "^5.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^6.0.1",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.89.2"
-  },
+  "keywords": [
+    "User interface",
+    "Drupal Base theme",
+    "Drupal",
+    "SCSS",
+    "FlexiStyle Bootstrap",
+    "Bootstrap",
+    "Bootstrap theme"
+  ],
+  "license": "GPL-2.0+",
+  "author": "@anoopsingh92",
   "dependencies": {
-    "del": "^8.0.0",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-cli": "^3.1.0",
-    "gulp-rename": "^2.1.0",
-    "sass-convert": "^0.5.2",
-    "sassdoc": "^2.7.4"
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.29.3",
+    "clean-css-cli": "^5.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-inline-svg": "^6.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "sass": "^1.69.5"
   }
 }

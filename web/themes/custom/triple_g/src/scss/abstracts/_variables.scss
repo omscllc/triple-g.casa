@@ -1,0 +1,108 @@
+// =============================================================================
+// VARIABLES
+// =============================================================================
+//
+// This file contains all application-wide Sass variables.
+// =============================================================================
+
+// Colors
+// =============================================================================
+
+// Brand Colors
+$primary-shade: rgb(255, 78, 46);
+$primary-light: tint-color($primary-shade, 37%);
+$primary-dark: shade-color($primary-shade, 12%);
+$accent-shade: #6141ac;
+$accent-light: tint-color($accent-shade, 37%);
+$accent-dark: shade-color($accent-shade, 12%);
+
+// Base Colors
+$white: #fff;
+$black: #000;
+
+// Gray Scale
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Semantic Colors
+$primary: $accent-shade;
+$secondary: $primary-shade;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: $gray-100;
+$dark: $gray-800;
+
+// Body
+// =============================================================================
+$body-bg: $white;
+$body-color: $gray-800;
+
+// Links
+// =============================================================================
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Typography
+// =============================================================================
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+// Spacing
+// =============================================================================
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
+// Components
+// =============================================================================
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+$btn-border-radius: 0;
+$nav-tabs-border-radius: 0;
+
+// Z-index
+// =============================================================================
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-modal: 1050;
+$zindex-popover: 1060;
+$zindex-tooltip: 1070;
+
+// Legacy Variables (for backward compatibility)
+// =============================================================================
+$brand-primary: $accent-shade;
+$brand-inverse: $primary-shade;
+$inverse-bg: $primary-shade;
+$inverse-color: $white;
