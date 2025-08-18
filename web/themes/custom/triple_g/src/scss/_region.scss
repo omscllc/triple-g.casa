@@ -1,0 +1,10 @@
+body .region {
+  &-sidebar {
+    &-first {
+      .block {
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+}

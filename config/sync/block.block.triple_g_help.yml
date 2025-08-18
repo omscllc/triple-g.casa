@@ -1,0 +1,22 @@
+uuid: a8900af7-2ca0-4417-b36d-4e1d1d314352
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - triple_g
+_core:
+  default_config_hash: IdYQBbSs0hzTITG-aGp0MFamfuQAyV8aW91XNq9TYak
+id: triple_g_help
+theme: triple_g
+region: header
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

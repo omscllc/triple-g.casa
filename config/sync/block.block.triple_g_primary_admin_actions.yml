@@ -1,0 +1,20 @@
+uuid: 7d9be52b-f010-4e5a-bbb2-5ddfb085794b
+langcode: en
+status: false
+dependencies:
+  theme:
+    - triple_g
+_core:
+  default_config_hash: 7tjVdwfc7Hhb0DFiLhJY9v_f220_B9r5K3A8oB2ayVo
+id: triple_g_primary_admin_actions
+theme: triple_g
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

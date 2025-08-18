@@ -1,0 +1,201 @@
+@use "variables";
+
+body {
+  #block {
+    &-triple-g {
+      &-main-menu {
+        .navbar {
+          &.navbar-expand-lg {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: none;
+
+            .container-fluid {
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+            }
+
+            .navbar-collapse {
+              display: block;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+
+        ul {
+          &.navbar-nav {
+            display: flex;
+            flex-direction: column;
+            color: variables.$navbar-color;
+            font-family: variables.$slogan-font;
+            font-size: variables.$body-font-size;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+
+          li {
+            font-family: variables.$slogan-font, variables.$default-fonts;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: variables.$title-color;
+            position: relative;
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0.5rem 1.25rem 0.5rem 0;
+
+            ul {
+              &.dropdown-menu {
+                background-color: variables.$dropdown-background-color;
+                font-size: variables.$body-font-size;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                position: absolute;
+                border: none;
+                border-radius: 0;
+                z-index: 1000;
+              }
+            }
+
+            &.show,
+            &.nav-item.dropdown.show {
+              > ul.dropdown-menu {
+                display: block;
+              }
+            }
+
+            .dropdown-toggle {
+              position: relative;
+
+              &:after {
+                display: inline-block;
+                margin-left: 0.5em;
+                vertical-align: 0.2em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+              }
+            }
+
+            ul {
+              li {
+                font-family: variables.$body-font;
+                font-size: variables.$body-font-size;
+                padding-right: 0;
+              }
+            }
+          }
+        }
+
+        li {
+            &.nav-item {
+              &.dropdown {
+                ul {
+                  &.dropdown-menu {
+                    li {
+                      &.nav-item {
+                        a {
+                          &.dropdown-item {
+                            color: variables.$font-color;
+                            font-size: variables.$body-font-size;
+                            display: block;
+                            width: 100%;
+                            padding: 0.5rem 1rem;
+                            text-decoration: none;
+                            background-color: transparent;
+                            border: none;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        .nav-item {
+          display: block;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+
+          a {
+            color: variables.$link-color;
+            font-size: 1.5rem;
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &-site {
+        &-branding {
+          > div {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            float: left;
+            gap: 5rem;
+            height: fit-content;
+            width: max-content;
+          }
+
+          .site-logo {
+            max-height: 10rem;
+            max-width: 10rem;
+          }
+
+          .site-slogan {
+            color: variables.$title-color;
+            font-family: variables.$slogan-font, variables.$default-fonts;
+            font-size: 1.5rem;
+          }
+        }
+
+      }
+
+      &-search-form {
+        &-narrow {
+          margin-left: 15rem;
+          margin-right: 2rem;
+        }
+      }
+
+      &-poweredbydrupal {
+        span {
+          &.powered-by {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            gap: .4rem;
+
+            img {
+              &.drupal-logo {
+                height: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+
+      &-copyright {
+        text-align: center;
+      }
+    }
+  }
+}

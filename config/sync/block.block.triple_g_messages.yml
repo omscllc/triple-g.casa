@@ -1,0 +1,22 @@
+uuid: 1faad000-ff5d-461f-8341-dc1c0fa5790d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - triple_g
+_core:
+  default_config_hash: _BUKEm6BkQZ7y5rTrexwWDTggTdT--5GGbgAikpkVns
+id: triple_g_messages
+theme: triple_g
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

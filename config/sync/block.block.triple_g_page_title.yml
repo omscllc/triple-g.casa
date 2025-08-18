@@ -1,0 +1,20 @@
+uuid: 2d1b1e85-da0e-4239-8070-db270ba70562
+langcode: en
+status: true
+dependencies:
+  theme:
+    - triple_g
+_core:
+  default_config_hash: iSqWHk_ODnffB8oY_E1-ZR36Q3SjuX2jj-NOOAVpqYQ
+id: triple_g_page_title
+theme: triple_g
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

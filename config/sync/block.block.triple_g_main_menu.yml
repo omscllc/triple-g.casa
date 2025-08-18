@@ -1,0 +1,27 @@
+uuid: 2419f233-1cc3-4fe6-a80d-5cc656556b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - triple_g
+_core:
+  default_config_hash: M3BwVJ6XUxzkw-DQ7Jq1UcYtMMTcjHHMKucuARBkqc4
+id: triple_g_main_menu
+theme: triple_g
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 4
+  expand_all_items: true
+visibility: {  }

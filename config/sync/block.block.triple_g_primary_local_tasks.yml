@@ -1,0 +1,22 @@
+uuid: 871a5a45-4db2-4d7e-88e9-4a65a1ad8b0a
+langcode: en
+status: false
+dependencies:
+  theme:
+    - triple_g
+_core:
+  default_config_hash: mSQ66w6YB3Z4acORQTmlbiROXktUncGcgnB6Vst7phg
+id: triple_g_primary_local_tasks
+theme: triple_g
+region: header
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

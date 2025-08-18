@@ -1,0 +1,17 @@
+@use "variables";
+
+// Configure Font Awesome font path so generated CSS points to the actual webfonts directory
+// This must come before importing the style modules so the configuration is applied.
+@use "../fontawesome/scss/brands/variables" as fa-brands-vars with (
+  $font-path: "../fontawesome/webfonts"
+);
+@use "../fontawesome/scss/classic/variables" as fa-classic-vars with (
+  $font-path: "../fontawesome/webfonts"
+);
+
+// Import Font Awesome style modules
+@use "../fontawesome/scss/brands/fontawesome" as fa-brands;
+@use "../fontawesome/scss/classic/fontawesome" as fa-classic;
+@use "../fontawesome/scss/classic/regular" as fa-regular;
+@use "../fontawesome/scss/classic/solid" as fa-solid;
+@use "../fontawesome/scss/classic/thin" as fa-thin;

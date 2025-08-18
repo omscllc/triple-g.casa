@@ -1,38 +1,24 @@
-name: Geeks, Gadgets and Gizmos theme
-description: 'The Geeks, Gadgets and Gizmos theme theme is built on the foundation of FlexiStyle Bootstrap, providing the same compatibility and features, with added support for SCSS for more efficient styling.'
+name: triple_g
 type: theme
-base theme: flexistyle_bootstrap
-core_version_requirement: ^9 || ^10 || ^11
-logo: logo.png
-
+base theme: clean_blog_theme
+description: Triple G is a sub theme of Clean Blog Theme to allow for the overriding of some of the design choices
+package: Custom
+core_version_requirement: ^10 || ^11
 libraries:
   - triple_g/global
-
 regions:
-  secondary_menu: 'Secondary menu'
   header: 'Header'
-  search: 'Search'
   primary_menu: 'Primary menu'
-  banner: 'Banner'
-  featured: 'Featured'
-  breadcrumb: 'Breadcrumb'
-  highlighted: 'Highlighted'
-  help: 'Help'
-  content: 'Content'
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
-  content_bottom: 'Content Bottom'
-  featured_bottom: 'Featured Bottom'
-  footer_first: 'Footer First'
-  footer_second: 'Footer Second'
-  footer_third: 'Footer Third'
-  footer_fourth: 'Footer Fourth'
-  footer: 'Footer'
-
+  secondary_menu: 'Secondary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-
-# Information added by Drupal.org packaging script on 2024-09-05
-version: '1.0.8'
-project: 'triple_g'
-datestamp: 1725535225
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  footer_first: 'First Footer'
+  footer_second: 'Second Footer'
+  footer_third: 'Third Footer'
+  footer_fourth: 'Fourth Footer'
+  footer_fifth: 'Site Footer'

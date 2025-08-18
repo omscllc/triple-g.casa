@@ -4,11 +4,11 @@ langcode: en
 uuid: fdc354b0-f093-4b30-86d4-6aaf4b7be853
 name: 'Geeks, Gadgets and Gizmos'
 mail: admin@triple-g.casa
-slogan: ''
+slogan: 'Just another geek'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/4
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

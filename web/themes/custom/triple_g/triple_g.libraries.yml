@@ -1,10 +1,14 @@
+# Main theme library.
 global:
   css:
-    theme:
-      css/style.min.css: {}
+    base:
+      css/triple_g.min.css: {minified: true}
   js:
-    node_modules/bootstrap/dist/js/bootstrap.bundle.min.js: {}
-    js/global.js: {}
+    js/triple_g.min.js: {minified: true}
   dependencies:
-    - core/jquery
-    - core/drupal
+    - clean_blog_theme/global-css
+
+two_column_64_33:
+  css:
+    layout:
+      layouts/two-column/two-column-64-33.css: {}

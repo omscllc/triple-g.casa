@@ -1,0 +1,22 @@
+uuid: 9400a0f3-8a11-4198-84c3-9823168cfdb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - triple_g
+_core:
+  default_config_hash: ApBXDJX-hVDtzox6ufXoqMp0d5R2V4_brSMlblzuQGI
+id: triple_g_content
+theme: triple_g
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

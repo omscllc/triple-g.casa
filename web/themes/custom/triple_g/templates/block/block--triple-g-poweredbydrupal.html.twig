@@ -1,0 +1,12 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+{#  {{ attach_library('olivero/powered-by-block') }}#}
+  <span class="powered-by">
+    {% trans %}Powered by{% endtrans %}
+    <span role="img" aria-label="{{ 'Drupal Logo'|t }}">
+      <img class="drupal-logo" src="/themes/custom/triple_g/images/drupal.svg" alt="{{ 'Drupal Logo'|t }}">
+    </span>
+    <a href="https://www.drupal.org">{% trans %}Drupal{% endtrans %}</a>
+  </span>
+{% endblock %}

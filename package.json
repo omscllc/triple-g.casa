@@ -1,0 +1,42 @@
+{
+  "name": "triple_g.casa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass web/themes/custom/triple_g/src/scss/main.scss web/themes/custom/triple_g/css/triple_g.css",
+    "scss:min": "sass web/themes/custom/triple_g/src/scss/main.scss web/themes/custom/triple_g/css/triple_g.min.css --style=compressed --no-source-map",
+    "minify:css": "css-minify -f web/themes/custom/triple_g/css/triple_g.css -o web/themes/custom/triple_g/css/",
+    "clean:css": "rm web/themes/custom/triple_g/css/triple_g.css",
+    "build:css": "npm-run-all scss:min",
+    "watch:css": "sass --watch web/themes/custom/triple_g/src/scss/main.scss:web/themes/custom/triple_g/css/triple_g.min.css --style=compressed --no-source-map",
+    "concat:js": "find web/themes/custom/triple_g/src/js -name '*.js' | xargs concat -o web/themes/custom/triple_g/js/triple_g.js",
+    "minify:js": "terser web/themes/custom/triple_g/js/triple_g.js -o web/themes/custom/triple_g/js/triple_g.min.js --compress --mangle",
+    "clean:js": "rm web/themes/custom/triple_g/js/triple_g.js",
+    "build:js": "npm-run-all concat:js minify:js clean:js",
+    "watch:js": "while true; do find web/themes/custom/triple_g/src/js -name '*.js' | xargs concat -o web/themes/custom/triple_g/js/triple_g.js; sleep 2; done",
+    "browser-sync": "browser-sync start --proxy 'triple-g.local:8080' --files 'web/themes/custom/triple_g/css/*.min.css, web/themes/custom/triple_g/js/*.min.js, web/themes/custom/triple_g/templates/**/*.twig, web/themes/custom/triple_g/**/*.php' --no-open --no-notify --no-ghost-mode --reload-delay 300",
+    "build": "npm-run-all scss:min build:js",
+    "watch": "npm-run-all -p watch:css watch:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dweinerATL/triple_g.casa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dweinerATL/triple_g.casa/issues"
+  },
+  "homepage": "https://github.com/dweinerATL/triple_g.casa#readme",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concat": "^1.0.3",
+    "css-minify": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.89.2",
+    "terser": "^5.43.1"
+  }
+}

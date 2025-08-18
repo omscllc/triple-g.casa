@@ -1,0 +1,111 @@
+@use "variables";
+
+html {
+  body {
+    color: variables.$font-color;
+    font-family: variables.$body-font;
+    font-size: variables.$body-font-size;
+    margin: 0;
+    padding: 0;
+
+    h1, h1 span {
+      font-size: 2.5rem;
+      font-family: variables.$title-font, variables.$default-fonts;
+      color: variables.$alt-title-color;
+      font-weight: variables.$title-font-weight;
+    }
+
+    p {
+      color: variables.$font-color;
+      font-size: variables.$body-font-size;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: variables.$title-color;
+      font-family: variables.$body-font;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    background-color: variables.$background-color;
+
+    #header {
+      background: variables.$background-color;
+
+      .nav-link, nav.navigation {
+        color: variables.$title-color;
+        font-size: variables.$body-font-size;
+        padding: 0;
+      }
+    }
+
+    .container-responsive {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+
+    #main {
+      padding: 0 0 2rem 0;
+
+      .sidebar > .region.region-sidebar-first .block {
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .breadcrumb {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: variables.$body-font-size;
+
+        li {
+          a {
+            color: variables.$link-color;
+            font-weight: bold;
+          }
+
+          color: variables.$font-color;
+        }
+      }
+    }
+    p {
+      color: variables.$font-color;
+    }
+
+    .attribution {
+      font-size: .75rem;
+    }
+
+    .paragraph--type--svg-image {
+      text-align: center;
+      padding-bottom: 2rem;
+
+      & img {
+        width: 15rem;
+      }
+    }
+  }
+}

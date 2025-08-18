@@ -1,8 +1,94 @@
 <?php
 
+declare(strict_types=1);
+
+//const SLIDESHOW_COUNT = 5;
+
+use Drupal\file\Entity\File;
+use Drupal\file\FileInterface;
+
 /**
  * @file
- * Functions to support theming in the FlexiStyle Bootstrap SCSS theme.
+ * Functions to support theming in the Triple G theme.
  */
 
-declare(strict_types=1);
+function triple_g_preprocess_page(&$vars): void
+{
+  // Add information about the number of sidebars.
+  if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
+    $vars['conditionalStr'] = 'col-md-6 col-sm-6';
+    $vars['sidebarfirst'] = 'col-md-3 col-sm-3';
+    $vars['sidebarsecond'] = 'col-md-3 col-sm-3';
+  } elseif (!empty($vars['page']['sidebar_first'])) {
+    $vars['conditionalStr'] = 'col-md-10 col-sm-10 ';
+    $vars['sidebarfirst'] = 'col-md-2 col-sm-2 centered';
+  } elseif (!empty($vars['page']['sidebar_second'])) {
+    $vars['conditionalStr'] = 'col-md-10 sol-sm-10 ';
+    $vars['sidebarsecond'] = 'col-md-2 col-sm-2';
+  } else {
+    $vars['conditionalStr'] = 'col-lg-12  centered ';
+  }
+  // Slide show
+  $show_slideshow = theme_get_setting('slideshow_display');
+  if ($vars['is_front'] && $show_slideshow) {
+    $vars['slider'] = array();
+    for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+      $fid = theme_get_setting("slide_image_$i");
+      if (!empty($fid)) {
+        $file = File::load($fid[0]);
+        /** @noinspection NullPointerExceptionInspection */
+        $uri = $file->getFileUri();
+        $image_path = Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+      } else {
+        $image_path = THEME_PATH . "/images/slider_img$i.jpg";
+      }
+      $vars['slider'][] = array(
+        'url' => theme_get_setting("slide_url_$i"),
+        'src' => $image_path,
+        'title' => theme_get_setting("slide_title_$i"),
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function triple_g_preprocess_node(array &$variables): void {
+  $user = $variables['node']->getOwner();
+  $name = $user->field_display_name->value;
+  $profile_alias = Drupal::service('path_alias.manager')->getAliasByPath('/user/' . $user->id());
+  $variables['author_name'] = $name;
+  $variables['profile_alias'] = $profile_alias;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function triple_g_preprocess_page_title(&$variables): void
+{
+  if (Drupal::routeMatch()->getRouteName() === 'entity.user.canonical') {
+    /** @var Drupal\user\Entity\User $user */
+    $user = Drupal::routeMatch()->getParameter('user');
+
+    if ($user && $user->hasField('field_display_name') && !empty($user->get('field_display_name'))) {
+      $variables['title'] = $user->get('field_display_name')->value;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for layout templates.
+ *
+ * This lets us pass custom variables to layout Twig templates, e.g.
+ * layouts/two-column/two-column-75-25.html.twig.
+ */
+function triple_g_preprocess_layout(array &$variables): void {
+  if (isset($variables['layout']) && is_object($variables['layout']) && method_exists($variables['layout'], 'getPluginId')) {
+    $plugin_id = $variables['layout']->getPluginId();
+    var_dump($plugin_id);
+    if ($plugin_id === 'two_column_33_64') {
+      $variables['extra_classes'] = '.layout--two-column-33-64__container';
+    }
+  }
+}

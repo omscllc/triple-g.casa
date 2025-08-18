@@ -68,30 +68,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
-# AWS User-specific
-.idea/**/aws.xml
-
-# Generated files
-.idea/**/contentModel.xml
-
-# Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
-
-# Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
+.idea/
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -108,9 +85,6 @@
 
 # CMake
 cmake-build-*/
-
-# Mongo Explorer plugin
-.idea/**/mongoSettings.xml
 
 # File-based project format
 *.iws
@@ -135,12 +109,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-
-# Editor-based Rest Client
-.idea/httpRequests
-
-# Android studio 3.1+ serialized cache file
-.idea/caches/build_file_checksums.ser
 
 ### Xcode template
 ## User settings
@@ -229,9 +197,6 @@ bh_unicode_properties.cache
 GitHub.sublime-settings
 
 /recipes/README.txt
-/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd
-/.idea/commandlinetools/Drush_7_4_25__5_06_PM.xml
-/.idea/inspectionProfiles/Project_Default.xml
 
 ### Crush
 # Ignore Crush files and directories
@@ -240,6 +205,7 @@ GitHub.sublime-settings
 crush
 CRUSH.md
 
-/.idea/php.xml
-/.idea/phpunit.xml
-/.idea/vcs.xml
+/node_modules
+/web/themes/custom/triple_g/css/triple_g.min.css
+/web/themes/custom/triple_g/js/triple_g.js
+/web/themes/custom/triple_g/js/triple_g.min.js
