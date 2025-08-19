@@ -64,7 +64,6 @@ html {
     }
 
     .container-responsive {
-      margin-left: 2.5rem;
       margin-right: 2.5rem;
     }
 
@@ -106,6 +105,12 @@ html {
       & img {
         width: 15rem;
       }
+    }
+
+    #sidebar-first {
+      height: 100vh;
+      box-shadow: 0px 0px 26px 0px black;
+      background-image: url('/themes/custom/triple_g/triple-g-background.png');
     }
   }
 }

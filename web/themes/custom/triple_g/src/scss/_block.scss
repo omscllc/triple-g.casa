@@ -33,7 +33,7 @@ body {
           &.navbar-nav {
             display: flex;
             flex-direction: column;
-            color: variables.$navbar-color;
+            color: variables.$button-text;
             font-family: variables.$slogan-font;
             font-size: variables.$body-font-size;
             width: 100%;
@@ -46,7 +46,7 @@ body {
             font-family: variables.$slogan-font, variables.$default-fonts;
             font-size: 1.5rem;
             line-height: 2rem;
-            color: variables.$title-color;
+            color: variables.$button-text;
             position: relative;
             display: block;
             width: 100%;
@@ -133,7 +133,7 @@ body {
           padding: 0;
 
           a {
-            color: variables.$link-color;
+            color: variables.$button-text;
             font-size: 1.5rem;
             display: block;
             width: 100%;
@@ -158,12 +158,15 @@ body {
           .site-logo {
             max-height: 10rem;
             max-width: 10rem;
+            padding-top: .5rem;
+            filter: drop-shadow(-1px 1px 8px #000000);
           }
 
           .site-slogan {
-            color: variables.$title-color;
+            color: variables.$button-text;
             font-family: variables.$slogan-font, variables.$default-fonts;
             font-size: 1.5rem;
+            margin-top: 0.5rem;
           }
         }
 
@@ -195,6 +198,23 @@ body {
 
       &-copyright {
         text-align: center;
+      }
+      &-page {
+        &-title {
+          .page-title {
+            margin-left: 1rem;
+            span {
+              &.field--name-title {
+                text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+              }
+            }
+          }
+        }
+      }
+
+      &-breadcrumbs {
+        margin-top: .25rem;
+        margin-left: 1rem;
       }
     }
   }

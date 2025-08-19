@@ -1,6 +1,9 @@
 body .region {
   &-sidebar {
     &-first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .block {
         background: transparent;
         box-shadow: none;
