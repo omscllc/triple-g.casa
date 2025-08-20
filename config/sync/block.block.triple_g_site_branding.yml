@@ -11,7 +11,7 @@ _core:
 id: triple_g_site_branding
 theme: triple_g
 region: sidebar_first
-weight: -6
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

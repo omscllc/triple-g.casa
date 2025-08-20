@@ -84,6 +84,7 @@ module:
   photoswipe: 0
   search: 0
   shortcut: 0
+  social_media_links: 0
   superfish: 0
   svg_image: 0
   system: 0

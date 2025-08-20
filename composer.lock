@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "146dfae2348b1232afc95d48a1067e43",
+    "content-hash": "8cce4f1a2f1bee85f1f8a83510032871",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4856,6 +4856,61 @@
             }
         },
         {
+            "name": "drupal/social_media_links",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/social_media_links.git",
+                "reference": "8.x-2.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "dd329d44f88112d2fe83f54331502738c5f2810b"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.10",
+                    "datestamp": "1724736719",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Christian Beier",
+                    "homepage": "https://www.drupal.org/u/cbeier",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "neslee canil pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                }
+            ],
+            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
+            "homepage": "https://www.drupal.org/project/social_media_links",
+            "support": {
+                "source": "https://git.drupalcode.org/project/social_media_links",
+                "issues": "https://www.drupal.org/project/issues/social_media_links"
+            }
+        },
+        {
             "name": "drupal/splide",
             "version": "2.0.12",
             "source": {
@@ -5545,29 +5600,6 @@
                 }
             ],
             "time": "2025-08-04T21:21:58+00:00"
-        },
-        {
-            "name": "dweineratl/clean_blog_theme",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dweinerATL/clean_blog_theme.git",
-                "reference": "f7efc303b2c245990f3eff421f9f37f0115378b1"
-            },
-            "require": {
-                "drupal/classy": "^2.0",
-                "drupal/core": "^9 || ^10 || ^11"
-            },
-            "type": "drupal-theme",
-            "authors": [
-                {
-                    "name": "David L. Weiner",
-                    "email": "David.L.Weiner30030@gmail.com",
-                    "role": "Developer, Maintainer"
-                }
-            ],
-            "description": "A clean blog theme forked from drupal/d8_blog_theme",
-            "time": "2025-08-18T03:57:38+00:00"
         },
         {
             "name": "dweineratl/entity_type_clone",
@@ -6880,6 +6912,29 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.0"
             },
             "time": "2025-07-27T20:03:57+00:00"
+        },
+        {
+            "name": "omscllc/clean_blog_theme",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/omscllc/clean_blog_theme",
+                "reference": "9b684441cec54560ed727ce78b455ddbef2913fe"
+            },
+            "require": {
+                "drupal/classy": "^2.0",
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-theme",
+            "authors": [
+                {
+                    "name": "David L. Weiner",
+                    "email": "David.L.Weiner30030@gmail.com",
+                    "role": "Developer, Maintainer"
+                }
+            ],
+            "description": "A clean blog theme forked from drupal/d8_blog_theme",
+            "time": "2025-08-20T03:41:25+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -10676,6 +10731,62 @@
                 }
             ],
             "time": "2025-05-03T07:21:55+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1||^2.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1||^2.0",
+                "ext-json": "*",
+                "mediawiki/mediawiki-phan-config": "0.11.1",
+                "php-parallel-lint/php-parallel-lint": "~1.3.1",
+                "phpspec/prophecy": "~1.15.0",
+                "phpunit/phpunit": "^8.5||^9.0",
+                "squizlabs/php_codesniffer": "~3.7.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Wikimedia\\Composer\\Merge\\V2\\MergePlugin",
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\Merge\\V2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "support": {
+                "issues": "https://github.com/wikimedia/composer-merge-plugin/issues",
+                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
+            },
+            "time": "2023-04-15T19:07:00+00:00"
         }
     ],
     "packages-dev": [
@@ -11764,8 +11875,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/layout_library": 10,
-        "dweineratl/clean_blog_theme": 20
+        "drupal/layout_library": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

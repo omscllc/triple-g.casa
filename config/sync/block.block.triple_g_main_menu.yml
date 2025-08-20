@@ -13,7 +13,7 @@ _core:
 id: triple_g_main_menu
 theme: triple_g
 region: sidebar_first
-weight: -5
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:

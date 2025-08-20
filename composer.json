@@ -15,7 +15,7 @@
         },
         {
             "type": "git",
-            "url" : "https://github.com/dweinerATL/clean_blog_theme.git"
+            "url" : "https://github.com/omscllc/clean_blog_theme"
         },
         {
             "type": "git",
@@ -69,13 +69,15 @@
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",
         "drupal/pathauto": "^1.13",
+        "drupal/social_media_links": "^2.10",
         "drupal/splide": "^2.0",
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13.6",
-        "dweineratl/clean_blog_theme": "dev-develop",
-        "dweineratl/entity_type_clone": "^99.0"
+        "dweineratl/entity_type_clone": "^99.0",
+        "omscllc/clean_blog_theme": "^2.0",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -92,7 +94,8 @@
             "drupal/core-recipe-unpack": true,
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
