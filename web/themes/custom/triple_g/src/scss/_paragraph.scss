@@ -16,6 +16,23 @@
       }
 
       .field--name-field-portfolio-items {
+        .next, .previous {
+          position: relative;
+          text-align: center;
+
+          i {
+            font-size: 1.5rem;
+          }
+        }
+
+        .previous {
+          top: 2rem;
+        }
+
+        .next {
+          bottom: 2.75rem;
+        }
+
         .field_item {
           display: flex;
           flex-direction: column;

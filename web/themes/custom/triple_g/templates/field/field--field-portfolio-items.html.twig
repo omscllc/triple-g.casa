@@ -58,9 +58,13 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>
-          <div><i class="fa-solid fa-angles-up"></i></div>
+          {% if not loop.first %}
+            <div class="previous" date-loop="{{ loop.index }}"><i class="fa-solid fa-angles-up fa-fade" style="--fa-animation-duration: 7s; --fa-fade-opacity: 0;"></i></div>
+          {% endif %}
           {{ item.content }}
-          <div><i class="fa-solid fa-angles-down"></i></div>
+          {% if not loop.last %}
+            <div class="next" data-loope="{{ loop.index }}"><i class="fa-solid fa-angles-down fa-fade" style="--fa-animation-duration: 7s; --fa-fade-opacity: 0;"></i></div>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
