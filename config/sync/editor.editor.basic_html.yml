@@ -28,7 +28,6 @@ settings:
       - '|'
       - blockQuote
       - drupalInsertImage
-      - node
       - drupalMedia
       - '|'
       - heading

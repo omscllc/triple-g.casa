@@ -32,6 +32,7 @@ settings:
       - '|'
       - blockQuote
       - drupalInsertImage
+      - drupalMedia
       - insertTable
       - horizontalLine
       - '|'

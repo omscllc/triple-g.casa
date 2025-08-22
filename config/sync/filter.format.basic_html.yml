@@ -7,6 +7,7 @@ dependencies:
     - editor
     - entity_embed
     - media
+    - no_nbsp
 _core:
   default_config_hash: mclCbTlJwWJORez4Y1eX2MqA0aGjSMAoJb3TaBABcK8
 name: 'Basic HTML'
@@ -73,6 +74,13 @@ filters:
     status: true
     weight: 15
     settings: {  }
+  filter_no_nbsp:
+    id: filter_no_nbsp
+    provider: no_nbsp
+    status: true
+    weight: 0
+    settings:
+      preserve_placeholders: true
   media_embed:
     id: media_embed
     provider: media
