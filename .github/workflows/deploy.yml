@@ -16,9 +16,9 @@ jobs:
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
-            cd ${{ vars.DEPLOY_PATH }}
+            cd ${{ vars.STG_DEPLOY_PATH }}
             git pull
-            drush sql:dump > /var/www/db_backups/${{ vars.BU_FILE_PREFIX }}.$(date +'%Y-%m-%d_%H:%M:%S').sql
+            drush sql:dump > /var/www/db_backups/${{ vars.STG_BU_FILE_PREFIX }}.$(date +'%Y-%m-%d_%H:%M:%S').sql
             composer install
             npm install
             npm run build
