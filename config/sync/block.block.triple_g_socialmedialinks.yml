@@ -8,8 +8,8 @@ dependencies:
     - triple_g
 id: triple_g_socialmedialinks
 theme: triple_g
-region: sidebar_first
-weight: -4
+region: secondary_menu
+weight: -7
 provider: null
 plugin: social_media_links_block
 settings:
