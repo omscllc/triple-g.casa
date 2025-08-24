@@ -50,6 +50,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <div class="item-title"><h2>{{ content.field_item_title }}</h2></div>
       <div class="portfolio-item">
         <div class="about">
           {{ content.field_about }}

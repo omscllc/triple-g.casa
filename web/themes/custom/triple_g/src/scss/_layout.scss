@@ -45,6 +45,8 @@ html {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        /* Reserve space for the fixed footer so content is not obscured. */
+        padding-bottom: calc(9rem + env(safe-area-inset-bottom, 0px));
     }
 
     main {
@@ -192,6 +194,16 @@ html {
       }
     }
 
+    footer.site-footer {
+      height: 9rem;
+      max-height: 9rem;
+      margin-top: auto;
+    }
 
+    @supports (position: sticky) {
+      .page-wrapper {
+        padding-bottom: 0;
+      }
+    }
   }
 }

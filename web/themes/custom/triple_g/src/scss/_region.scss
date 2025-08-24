@@ -40,7 +40,11 @@ body .region {
   }
 
   &-content {
-    height: 88vh;
+    height: 74vh;
+
+    @media screen and (min-width: 992px) {
+      height: 84vh;
+    }
   }
   &-secondary{
     &-menu {

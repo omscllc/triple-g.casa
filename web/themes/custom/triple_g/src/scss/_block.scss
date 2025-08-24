@@ -270,8 +270,9 @@ body {
       &-socialmedialinks {
         .horizontal {
           display: flex;
-          padding-left: .5rem;
-          padding-right: .5rem;
+          padding-left: 0;
+          padding-right: 0;
+          justify-content: center;
 
           @media screen and (min-width: 1200px) {
             padding-left: 1rem;
@@ -283,7 +284,7 @@ body {
             padding: .2rem .2rem;
 
             a {
-              color: variables.$button-text;
+              color: variables.$font-color;
             }
 
             @media screen and (min-width: 1200px) {
