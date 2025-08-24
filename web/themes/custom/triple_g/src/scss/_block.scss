@@ -4,6 +4,13 @@ body {
   #block {
     &-triple-g {
       &-main-menu {
+        position: absolute;
+        right: 0;
+
+        @media screen and (min-width: 992px) {
+          position: relative;
+        }
+
         .navbar {
           &.navbar-expand-lg {
             display: block;
@@ -18,13 +25,28 @@ body {
               width: 100%;
               padding: 0;
               margin: 0;
-            }
+              position: relative;
 
-            .navbar-collapse {
-              display: block;
-              width: 100%;
-              padding: 0;
-              margin: 0;
+              button.navbar-toggler {
+                position: absolute;
+                top: 0.5rem;
+                right: 1rem;
+                margin-top: 0; // overridden by positioning
+                z-index: 1060; // above the collapsing menu
+              }
+            }
+          }
+
+          &-collapse {
+            background-color: variables.$title-color;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 2.75rem;
+
+            @media screen and (min-width: 992px) {
+              background-color: unset;
+              padding-top: 0;
+              padding-left: 0;
             }
           }
         }
@@ -44,8 +66,7 @@ body {
 
           li {
             font-family: variables.$slogan-font, variables.$default-fonts;
-            font-size: 1.5rem;
-            line-height: 2rem;
+            line-height: 1rem;
             color: variables.$button-text;
             position: relative;
             display: block;
@@ -134,11 +155,15 @@ body {
 
           a {
             color: variables.$button-text;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             display: block;
             width: 100%;
             padding: 0.5rem 0;
             text-decoration: none;
+
+            @media screen and (min-width: 1600px) {
+              font-size: 1.5rem;
+            }
           }
         }
       }
@@ -156,18 +181,45 @@ body {
           }
 
           .site-logo {
-            max-height: 10rem;
-            max-width: 10rem;
+            width: 6rem;
+            min-width: auto;
+            height: auto;
+            margin-left: 0;
             padding-top: .5rem;
             filter: drop-shadow(-1px 1px 8px #000000);
+
+            @media screen and (min-width: 992px) {
+              width: 8rem;
+              margin-left: 1rem;
+            }
+
+            @media screen and (min-width: 1400px) {
+              width: auto;
+              max-height: 10rem;
+              max-width: 10rem;
+              margin-left: 0;
+            }
           }
 
           .site-slogan {
             color: variables.$button-text;
             font-family: variables.$slogan-font, variables.$default-fonts;
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
+            display: none;
+            margin-left: .9rem;
+            margin-top: -4rem;
+
+            @media screen and (min-width: 1200px) {
+              display: inline;
+              font-size: 1.1rem;
+            }
+
+            @media screen and (min-width: 1600px) {
+              font-size: 1.5rem;
+            }
           }
+
+
+
         }
 
       }
@@ -202,7 +254,6 @@ body {
       &-page {
         &-title {
           .page-title {
-            margin-left: 1rem;
             span {
               &.field--name-title {
                 text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
@@ -214,14 +265,29 @@ body {
 
       &-breadcrumbs {
         margin-top: .25rem;
-        margin-left: 1rem;
       }
 
       &-socialmedialinks {
+        .horizontal {
+          display: flex;
+          padding-left: .5rem;
+          padding-right: .5rem;
+
+          @media screen and (min-width: 1200px) {
+            padding-left: 1rem;
+          }
+        }
+
         ul {
           li {
+            padding: .2rem .2rem;
+
             a {
               color: variables.$button-text;
+            }
+
+            @media screen and (min-width: 1200px) {
+              padding: .2rem .35rem;
             }
           }
         }

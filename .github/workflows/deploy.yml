@@ -1,0 +1,30 @@
+name: Our Travel Home build and deploy
+
+on:
+  push:
+    branches: ['develop']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to staging
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ vars.DEPLOY_HOST }}
+          username: ${{ vars.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            cd ${{ vars.DEPLOY_PATH }}
+            git pull
+            drush sql:dump > /var/www/db_backups/${{ vars.BU_FILE_PREFIX }}.$(date +'%Y-%m-%d_%H:%M:%S').sql
+            composer install
+            npm install
+            npm run build
+            rm -rf node_modules
+            drush cr
+            drush cim -y
+            drush updb -y
+            drush cr
+            echo "Site deployed to staging"
