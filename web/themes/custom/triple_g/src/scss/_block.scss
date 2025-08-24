@@ -292,6 +292,10 @@ body {
           }
         }
       }
+
+      &-content {
+        max-height: 75vh;
+      }
     }
   }
 }

@@ -39,6 +39,9 @@ body .region {
     }
   }
 
+  &-content {
+    height: 88vh;
+  }
   &-secondary{
     &-menu {
       margin-right: auto;
