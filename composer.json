@@ -72,6 +72,7 @@
         "drupal/menu_item_extras": "^3.1",
         "drupal/no_nbsp": "^1.7",
         "drupal/pathauto": "^1.13",
+        "drupal/redis": "^1.10",
         "drupal/social_media_links": "^2.10",
         "drupal/splide": "^2.0",
         "drupal/superfish": "^1.13",
@@ -80,6 +81,7 @@
         "drush/drush": "^13.6",
         "dweineratl/entity_type_clone": "^99.0",
         "omscllc/clean_blog_theme": "^2.0",
+        "predis/predis": "^3.2",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
