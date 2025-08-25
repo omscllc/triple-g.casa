@@ -211,3 +211,4 @@ CRUSH.md
 /web/themes/custom/triple_g/js/triple_g.min.js
 /.npmrc
 /.cache_ggshield
+/web/libraries
