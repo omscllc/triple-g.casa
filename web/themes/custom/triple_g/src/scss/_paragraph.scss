@@ -1,6 +1,12 @@
 @use "variables";
 
 .paragraph {
+  .fit-image {
+    img {
+      width: auto;
+      height: 45vh
+    }
+  }
   &--portfolio {
     &--content {
       width: 100%;
