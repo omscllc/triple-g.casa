@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.portfolio_item.field_about
+    - field.field.paragraph.portfolio_item.field_item_title
     - field.field.paragraph.portfolio_item.field_slideshow
     - paragraphs.paragraphs_type.portfolio_item
   module:
     - entity_reference_revisions
+    - text
 id: paragraph.portfolio_item.default
 targetEntityType: paragraph
 bundle: portfolio_item
@@ -20,6 +22,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_item_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   field_slideshow:
@@ -29,6 +38,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden: {  }
