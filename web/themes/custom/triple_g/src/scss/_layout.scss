@@ -199,11 +199,5 @@ html {
       max-height: 9rem;
       margin-top: auto;
     }
-
-    @supports (position: sticky) {
-      .page-wrapper {
-        padding-bottom: 0;
-      }
-    }
   }
 }

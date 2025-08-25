@@ -295,7 +295,11 @@ body {
       }
 
       &-content {
-        max-height: 75vh;
+        article {
+          div.node__content {
+            padding-bottom: 8rem;
+          }
+        }
       }
     }
   }
