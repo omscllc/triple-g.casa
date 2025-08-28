@@ -72,7 +72,7 @@
 
       @media screen and (min-width: 992px) {
         scroll-snap-align: start;
-        height: 70vh;
+        min-height: 70vh;
       }
 
       .portfolio-item {
@@ -82,7 +82,7 @@
         @media screen and (min-width: 992px)  {
           flex-direction: row;
           flex-wrap: nowrap;
-          height: 70vh;
+          min-height: 70vh;
         }
 
         .about, .slideshow {
