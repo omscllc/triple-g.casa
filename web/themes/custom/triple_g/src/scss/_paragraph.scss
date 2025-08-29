@@ -82,7 +82,8 @@
         @media screen and (min-width: 992px)  {
           flex-direction: row;
           flex-wrap: nowrap;
-          min-height: 70vh;
+          min-height: 56vh;
+          height: 56vh;
         }
 
         .about, .slideshow {
@@ -95,6 +96,7 @@
           @media screen and (min-width: 992px) {
             flex: 0 0 75%;
             max-width: 75%;
+            overflow: hidden;
           }
         }
 

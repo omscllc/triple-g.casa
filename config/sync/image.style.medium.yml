@@ -15,9 +15,10 @@ effects:
       width: 220
       height: 220
       upscale: false
-  c410ed2f-aa30-4d9c-a224-d2865d9188cd:
-    uuid: c410ed2f-aa30-4d9c-a224-d2865d9188cd
+  14ca3957-a7d3-4f05-8d84-68b80f260821:
+    uuid: 14ca3957-a7d3-4f05-8d84-68b80f260821
     id: image_convert_avif
     weight: 2
     data:
       extension: webp
+pipeline: ''
