@@ -83,7 +83,6 @@ module:
   history: 0
   image: 0
   image_effects: 0
-  imageapi_optimize: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
   jquery_ui_tabs: 0
