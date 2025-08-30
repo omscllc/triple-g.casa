@@ -309,6 +309,9 @@ body {
                   align-items: baseline;
                   width: 100%;
                 }
+                &-content {
+                  background: black;
+                }
               }
 
               &-state {
