@@ -298,6 +298,25 @@ body {
         article {
           div.node__content {
             padding-bottom: 8rem;
+
+            .ui {
+              &-accordion {
+                &-header {
+                  display: inline-flex;
+                  margin: 0;
+                  padding: 0.5em 0.5em 0 0.7em;
+                  background: variables.$navbar-color;
+                  align-items: baseline;
+                  width: 100%;
+                }
+              }
+
+              &-state {
+                &-active {
+                  border: 1px solid white;
+                }
+              }
+            }
           }
         }
       }
