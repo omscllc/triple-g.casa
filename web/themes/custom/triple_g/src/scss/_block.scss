@@ -312,9 +312,12 @@ body {
                   background: variables.$navbar-color;
                   align-items: baseline;
                   width: 100%;
+                  border-bottom: 1px solid variables.$color-white;
                 }
                 &-content {
                   background: black;
+                  padding: 1rem;
+                  border: 1px solid variables.$color-gray;
                 }
 
                 .ui-widget-content a {
