@@ -199,5 +199,10 @@ html {
       max-height: 9rem;
       margin-top: auto;
     }
+
+    .ept-accordion-plus_minus_left .ui-accordion .ui-accordion-header.ui-state-active::before {
+      position: relative;
+      bottom: .25rem;
+    }
   }
 }
