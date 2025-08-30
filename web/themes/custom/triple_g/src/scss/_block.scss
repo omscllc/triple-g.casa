@@ -299,6 +299,10 @@ body {
           div.node__content {
             padding-bottom: 8rem;
 
+            .field--name-field-page-contents {
+              margin-bottom: 2rem;
+            }
+
             .ui {
               &-accordion {
                 &-header {
