@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.ept_image.field_ept_settings
     - field.field.paragraph.ept_image.field_ept_text
     - field.field.paragraph.ept_image.field_ept_title
+    - image.style.convert_to_avif
     - paragraphs.paragraphs_type.ept_image
   module:
     - link
@@ -26,7 +27,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: convert_to_avif
       image_loading:
         attribute: lazy
     third_party_settings: {  }

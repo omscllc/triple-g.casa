@@ -15,3 +15,9 @@ effects:
       width: 480
       height: 360
       anchor: center-center
+  ecf6e6ce-c343-4db9-9216-45a5afd13546:
+    uuid: ecf6e6ce-c343-4db9-9216-45a5afd13546
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

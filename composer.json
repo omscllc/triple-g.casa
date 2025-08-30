@@ -24,8 +24,9 @@
     ],
     "require": {
         "composer/installers": "^2.3",
-        "cweagans/composer-patches": "~1.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/backward_compatibility": "^1.0",
         "drupal/ckeditor5_plugin_pack": "^1.4",
         "drupal/colorbox": "^2.1",
         "drupal/config_ignore": "^3.3",
@@ -81,6 +82,7 @@
         "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13.6",
         "dweineratl/entity_type_clone": "^99.0",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "omscllc/clean_blog_theme": "^2.0",
         "predis/predis": "^3.2",
         "wikimedia/composer-merge-plugin": "^2.1"
@@ -98,6 +100,7 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "drupal/core-recipe-unpack": true,
+            "mglaman/composer-drupal-lenient": true,
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
             "phpstan/extension-installer": true,
@@ -170,6 +173,9 @@
                     "Drupal 11 compatibility": "patches/3476381-drupal-11-compatibility.diff"
                 }
             }
+        },
+        "drupal-lenient": {
+            "allowed-list": []
         }
     },
     "require-dev": {

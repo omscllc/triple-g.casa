@@ -1,4 +1,4 @@
-name: Our Travel Home build and deploy
+name: Triple G build and deploy
 
 on:
   push:
