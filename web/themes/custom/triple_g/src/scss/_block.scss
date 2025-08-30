@@ -316,6 +316,10 @@ body {
                 &-content {
                   background: black;
                 }
+
+                .ui-widget-content a {
+                  color: variables.$title-color
+                }
               }
 
               &-state {
