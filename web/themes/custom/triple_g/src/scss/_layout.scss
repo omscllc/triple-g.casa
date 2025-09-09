@@ -103,6 +103,10 @@ html {
     #main {
       padding: 0 0 2rem 0;
 
+      @media screen and (min-width: 992px) {
+        padding-left: 18rem;
+      }
+
       .sidebar > .region.region-sidebar-first .block {
         background: transparent;
         box-shadow: none;
@@ -152,10 +156,12 @@ html {
 
       @media screen and (min-width: 992px) {
         height: 88vh;
-
         width: 10rem;
         padding-left: .5rem;
         flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
       }
 
       @media screen and (min-width: 1200px) {
@@ -239,8 +245,5 @@ html {
         }
       }
     }
-
-
   }
-
 }
