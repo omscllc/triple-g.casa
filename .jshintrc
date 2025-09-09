@@ -1,0 +1,75 @@
+{
+  // Environment options
+  "browser": true,
+  "jquery": true,
+  "node": true,
+  "esversion": 6,
+  
+  // Globals
+  "globals": {
+    "Drupal": false,
+    "drupalSettings": false,
+    "drupalTranslations": false,
+    "domready": false,
+    "jQuery": false,
+    "_": false,
+    "matchMedia": false,
+    "Backbone": false,
+    "Modernizr": false,
+    "CKEDITOR": false,
+    "once": false
+  },
+  
+  // Enforcing options - only the most important ones
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonbsp": true,
+  "nonew": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": false,  // Changed to false to allow non-strict mode
+  "trailing": true,
+  "maxparams": 5,
+  "maxdepth": 5,
+  "maxstatements": 30,
+  "maxcomplexity": 10,
+  "maxlen": 120,
+  
+  // Relaxing options
+  "asi": false,
+  "boss": false,
+  "debug": false,
+  "eqnull": true,  // Allow == null checks
+  "esnext": false,
+  "evil": false,
+  "expr": true,    // Allow expressions like foo && foo.bar
+  "funcscope": false,
+  "globalstrict": false,
+  "lastsemic": false,
+  "laxbreak": true,  // Tolerate unsafe line breaks
+  "laxcomma": true,  // Tolerate comma-first style
+  "loopfunc": true,  // Allow functions in loops
+  "maxerr": 50,
+  "multistr": true,  // Tolerate multi-line strings
+  "notypeof": false,
+  "proto": false,
+  "scripturl": true,  // Allow javascript: in URLs
+  "shadow": false,
+  "sub": true,      // Tolerate dot notation when it could be subscript
+  "supernew": true,  // Tolerate `new function () { ... }`
+  "validthis": true, // Allow this in non-constructor functions
+  
+  // Disable timeouts
+  "timeout": 0
+}
