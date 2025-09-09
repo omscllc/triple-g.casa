@@ -205,6 +205,15 @@ html {
       bottom: .25rem;
     }
 
+    .teaser {
+      cursor: pointer;
+      color: variables.$alt-title-color;
+    }
+    p.teaser-container {
+      display: inline-flex;
+      align-items: baseline;
+    }
+
     dialog {
       background: variables.$background-color;
       max-width: 90vw;
