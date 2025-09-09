@@ -204,5 +204,34 @@ html {
       position: relative;
       bottom: .25rem;
     }
+
+    dialog {
+      background: variables.$background-color;
+      max-width: 90vw;
+      max-height: 85vh;
+      border: .2rem solid variables.$navbar-color;
+
+      @media screen and (min-width: 992px) {
+        max-width: 70vw;
+      }
+
+
+      p.close-modal-container {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+
+        span.close-modal {
+          cursor: pointer;
+          background: #CC5500;
+          padding: .5rem .75rem;
+          border-radius: 1rem;
+          filter: drop-shadow(1px 1px 1px #000000);
+        }
+      }
+    }
+
+
   }
+
 }

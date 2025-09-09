@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.ept_accordion
     - paragraphs.paragraphs_type.ept_carousel
     - paragraphs.paragraphs_type.ept_image_gallery
+    - paragraphs.paragraphs_type.ept_micromodal
     - paragraphs.paragraphs_type.ept_quote
     - paragraphs.paragraphs_type.ept_slick_slider
     - paragraphs.paragraphs_type.ept_slideshow
@@ -34,6 +35,7 @@ settings:
       ept_accordion: ept_accordion
       ept_carousel: ept_carousel
       ept_image_gallery: ept_image_gallery
+      ept_micromodal: ept_micromodal
       ept_quote: ept_quote
       ept_slick_slider: ept_slick_slider
       ept_slideshow: ept_slideshow
@@ -93,7 +95,7 @@ settings:
         enabled: true
       ept_micromodal:
         weight: 57
-        enabled: false
+        enabled: true
       ept_quote:
         weight: 58
         enabled: true

@@ -16,6 +16,9 @@
     "build:js": "npm-run-all concat:js minify:js clean:js",
     "watch:js": "while true; do find web/themes/custom/triple_g/src/js -name '*.js' | xargs concat -o web/themes/custom/triple_g/js/triple_g.js; sleep 2; done",
     "browser-sync": "browser-sync start --proxy 'triple-g.local:8080' --files 'web/themes/custom/triple_g/css/*.min.css, web/themes/custom/triple_g/js/*.min.js, web/themes/custom/triple_g/templates/**/*.twig, web/themes/custom/triple_g/**/*.php' --no-open --no-notify --no-ghost-mode --reload-delay 300",
+    "lint:js": "npx jshint --config .jshintrc web/modules/custom/drupal_cut_v2/js/ web/themes/custom/triple_g/src/js/",
+    "lint:js:fix": "npx jshint --config .jshintrc --fix web/modules/custom/drupal_cut_v2/js/ web/themes/custom/triple_g/src/js/",
+    "prebuild": "npm run lint:js",
     "build": "npm-run-all scss:min build:js",
     "watch": "npm-run-all -p watch:css watch:js"
   },

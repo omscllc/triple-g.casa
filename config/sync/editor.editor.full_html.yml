@@ -23,12 +23,14 @@ settings:
       - specialCharacters
       - emoji
       - icon
+      - htmlEmbed
       - '|'
       - fontColor
       - fontFamily
       - fontSize
       - fontBackgroundColor
       - '|'
+      - detail
       - link
       - findAndReplace
       - '-'
@@ -151,10 +153,10 @@ settings:
       enabled: true
     ckeditor5_plugin_pack_layout_table__table_properties:
       use_default_colors: true
-      use_hex_colors: true
+      use_hex_colors: false
       default_table_properties:
         border_style: ''
-        color_picker: rgb
+        color_picker: hsl
         use_default_border_color: false
         border_color: '#000000'
         border_width: ''
@@ -249,7 +251,10 @@ settings:
       word_count_enabled: true
       word_count_mode: words_chars
     ckeditor5_sourceEditing:
-      allowed_tags: {  }
+      allowed_tags:
+        - '<detail name>'
+        - '<dialog id>'
+        - '<button class data-target>'
     editor_advanced_link_link:
       enabled_attributes:
         - aria-label
