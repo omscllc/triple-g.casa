@@ -4,22 +4,22 @@ body .region {
       display: flex;
       flex-direction: row;
 
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: var(--bs-breakpoint-lg)) {
         flex-direction: column;
         height: 80vh;
         position: relative;
         padding-left: .4rem;
       }
 
-      @media screen and (min-width: 992px) and (max-width: 992px) {
+      @media screen and (min-width: var(--bs-breakpoint-lg)) and (max-width: var(--bs-breakpoint-lg)) {
         padding-left: 0;
       }
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: var(--bs-breakpoint-xl)) {
         margin-left: -1.1rem;
       }
 
-      @media screen and (min-width: 1400px) {
+      @media screen and (min-width: var(--bs-breakpoint-xxl)) {
         margin-left: 0;
       }
 
@@ -31,7 +31,7 @@ body .region {
 
     &-secondary {
       &-menu {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: var(--bs-breakpoint-lg)) {
           position: absolute;
           bottom: 0;
         }
@@ -42,7 +42,7 @@ body .region {
   &-content {
     height: 74vh;
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: var(--bs-breakpoint-lg)) {
       height: 84vh;
     }
   }
