@@ -69,7 +69,7 @@ html {
       margin-right: 0;
       margin-left: 0;
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         margin-right: 0;
       }
 
@@ -79,11 +79,11 @@ html {
           padding-left: 1rem;
           width: 95vw;
 
-          @media screen and (min-width: var(--bs-breakpoint-lg)) {
+          @media screen and (min-width: 992px) {
             width: 78vw;
           }
 
-          @media screen and (min-width: var(--tg-breakpoint-3xl)) {
+          @media screen and (min-width: 1600px) {
             width: 80vw;
           }
         }
@@ -93,7 +93,7 @@ html {
         margin-left: 0;
       }
 
-        @media screen and (min-width: var(--bs-breakpoint-lg)) {
+        @media screen and (min-width: 992px) {
           margin-left: calc(-.5 * var(--bs-gutter-x));
         }
       }
@@ -103,19 +103,19 @@ html {
     #main {
       padding: 0 0 2rem 0;
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         padding-left: 12rem;
       }
 
-      @media screen and (min-width: var(--bs-breakpoint-xl)) {
+      @media screen and (min-width: 1200px) {
         padding-left: 14rem;
       }
 
-      @media screen and (min-width: var(--bs-breakpoint-xxl)) {
+      @media screen and (min-width: 1400px) {
         padding-left: 16rem;
       }
 
-      @media screen and (min-width: var(--tg-breakpoint-3xl)) {
+      @media screen and (min-width: 1600px) {
         padding-left: 18rem;
       }
 
@@ -166,7 +166,7 @@ html {
       flex-direction: row;
       align-items: baseline;
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         height: 88vh;
         width: 10rem;
         padding-left: .5rem;
@@ -176,16 +176,16 @@ html {
         left: 0;
       }
 
-      @media screen and (min-width: var(--bs-breakpoint-xl)) {
+      @media screen and (min-width: 1200px) {
         width: 12.3rem;
         padding-left: 1rem;
       }
 
-      @media screen and (min-width: var(--bs-breakpoint-xxl)) {
+      @media screen and (min-width: 1400px) {
         width: 14.3rem;
       }
 
-      @media screen and (min-width: var(--tg-breakpoint-3xl)) {
+      @media screen and (min-width: 1600px) {
         width: 16.3rem;
         padding-left: 0;
         padding-right: 0;
@@ -238,7 +238,7 @@ html {
       max-height: 85vh;
       border: .2rem solid variables.$navbar-color;
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         max-width: 70vw;
       }
 

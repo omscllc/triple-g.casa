@@ -12,7 +12,7 @@
       width: 100%;
       scroll-behavior: smooth;
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
         -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
@@ -38,7 +38,7 @@
           display: none;
         }
 
-        @media screen and (min-width: var(--bs-breakpoint-lg)){
+        @media screen and (min-width: 992px){
           .previous, .next {
             display: block;
           }
@@ -77,7 +77,7 @@
       width: 100%;
 
 
-      @media screen and (min-width: var(--bs-breakpoint-lg)) {
+      @media screen and (min-width: 992px) {
         scroll-snap-align: start;
         min-height: 70vh;
       }
@@ -86,7 +86,7 @@
         display: flex;
         flex-direction: column-reverse;
 
-        @media screen and (min-width: var(--bs-breakpoint-lg))  {
+        @media screen and (min-width: 992px)  {
           flex-direction: row;
           flex-wrap: nowrap;
           min-height: 56vh;
@@ -100,7 +100,7 @@
         .about {
           flex: 1;
 
-          @media screen and (min-width: var(--bs-breakpoint-lg)) {
+          @media screen and (min-width: 992px) {
             flex: 0 0 75%;
             max-width: 75%;
             overflow: hidden;
@@ -111,7 +111,7 @@
           flex: 1;
           max-width: 100%;
 
-          @media screen and (min-width: var(--bs-breakpoint-lg))  {
+          @media screen and (min-width: 992px)  {
             margin-top: 6.5rem;
             flex: 0 0 25%;
             max-width: 25%;

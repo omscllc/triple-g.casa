@@ -7,7 +7,7 @@ body {
         position: absolute;
         right: 0;
 
-        @media screen and (min-width: var(--bs-breakpoint-lg)) {
+        @media screen and (min-width: 992px) {
           position: relative;
         }
 
@@ -43,7 +43,7 @@ body {
             padding-right: 1rem;
             padding-top: 2.75rem;
 
-            @media screen and (min-width: var(--bs-breakpoint-lg)) {
+            @media screen and (min-width: 992px) {
               background-color: unset;
               padding-top: 0;
               padding-left: 0;
@@ -161,7 +161,7 @@ body {
             padding: 0.5rem 0;
             text-decoration: none;
 
-            @media screen and (min-width: var(--tg-breakpoint-3xl)) {
+            @media screen and (min-width: 1600px) {
               font-size: 1.5rem;
             }
           }
@@ -188,12 +188,12 @@ body {
             padding-top: .5rem;
             filter: drop-shadow(-1px 1px 8px #000000);
 
-            @media screen and (min-width: var(--bs-breakpoint-lg)) {
+            @media screen and (min-width: 992px) {
               width: 8rem;
               margin-left: 1rem;
             }
 
-            @media screen and (min-width: var(--bs-breakpoint-xxl)) {
+            @media screen and (min-width: 1400px) {
               width: auto;
               max-height: 10rem;
               max-width: 10rem;
@@ -208,12 +208,12 @@ body {
             margin-left: .9rem;
             margin-top: -4rem;
 
-            @media screen and (min-width: var(--bs-breakpoint-xl)) {
+            @media screen and (min-width: 1200px) {
               display: inline;
               font-size: 1.1rem;
             }
 
-            @media screen and (min-width: var(--tg-breakpoint-3xl)) {
+            @media screen and (min-width: 1600px) {
               font-size: 1.5rem;
             }
           }
@@ -274,7 +274,7 @@ body {
           padding-right: 0;
           justify-content: center;
 
-          @media screen and (min-width: var(--bs-breakpoint-xl)) {
+          @media screen and (min-width: 1200px) {
             padding-left: 1rem;
           }
         }
@@ -287,7 +287,7 @@ body {
               color: variables.$font-color;
             }
 
-            @media screen and (min-width: var(--bs-breakpoint-xl)) {
+            @media screen and (min-width: 1200px) {
               padding: .2rem .35rem;
             }
           }
