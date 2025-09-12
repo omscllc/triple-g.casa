@@ -118,23 +118,18 @@
           }
 
           .field--name-field-slideshow {
-            filter: drop-shadow(-1px 1px 8px #000000);
+            filter: drop-shadow(.2rem .2rem .5rem variables.$color-black);
             margin-right: 1rem;
           }
         }
       }
 
-      .ept-container .field--name-field-ept-tab-text p,
-      .ept-container .field--name-field-ept-tab-text ul li {
-        color: gold;
-      }
-
       .ept-container .ui-widget-content a {
-        color: palegoldenrod;
+        color: variables.$link-color;
       }
 
       .ept-tabs-minimalist_tabs .ui-tabs-nav .ui-state-active a {
-        color: gold;
+        color: variables.$link-color;
       }
     }
 

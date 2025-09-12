@@ -241,6 +241,7 @@ html {
       max-width: 90vw;
       max-height: 85vh;
       border: .2rem solid variables.$navbar-color;
+      filter: drop-shadow(.2rem .2rem .3rem variables.$color-black);
 
       @media screen and (min-width: 992px) {
         max-width: 70vw;
@@ -257,17 +258,35 @@ html {
           background: #CC5500;
           padding: .5rem .75rem;
           border-radius: 1rem;
-          filter: drop-shadow(1px 1px 1px #000000);
+          filter: drop-shadow(.2rem .2rem .3rem variables.$color-black);
         }
       }
     }
 
     .contact-me {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      flex-direction: column;
+      //display: flex;
+      //gap: 1rem;
+      //flex-wrap: wrap;
+      //justify-content: space-between;
+      //flex-direction: column;
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+      }
+
+
+    }
+
+    li.ui-tabs-tab:not(.ui-tabs-active) {
+      transition: transform .3s ease-in-out;
+
+      a:hover {
+        color: variables.$navbar-color;
+        transform: scale(1.05);
+      }
     }
   }
 }

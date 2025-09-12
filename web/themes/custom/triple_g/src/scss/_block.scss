@@ -160,9 +160,14 @@ body {
             width: 100%;
             padding: 0.5rem 0;
             text-decoration: none;
+            transition: tranform 0.3s ease-in-out;
 
             @media screen and (min-width: 1600px) {
               font-size: 1.5rem;
+            }
+
+            &:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -186,7 +191,7 @@ body {
             height: auto;
             margin-left: 0;
             padding-top: .5rem;
-            filter: drop-shadow(-1px 1px 8px #000000);
+            filter: drop-shadow(.2rem .2rem .5rem variables.$color-black);
 
             @media screen and (min-width: 992px) {
               width: 8rem;
@@ -256,7 +261,7 @@ body {
           .page-title {
             span {
               &.field--name-title {
-                text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+                filter: drop-shadow(.2rem .2rem .2rem variables.$color-black);
               }
             }
           }
@@ -298,10 +303,6 @@ body {
         article {
           div.node__content {
             padding-bottom: 8rem;
-
-            a {
-              color: variables.$color-muted-lavender;
-            }
 
             .field--name-field-page-contents {
               margin-bottom: 2rem;
