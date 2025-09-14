@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.contacts.field_contact_cards
+    - field.field.node.contacts.field_contact_form
     - node.type.contacts
   module:
     - path
+    - webform
 id: node.contacts.default
 targetEntityType: node
 bundle: contacts
@@ -27,6 +29,14 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_contact_form:
+    type: webform_entity_reference_select
+    weight: 122
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
     third_party_settings: {  }
   path:
     type: path

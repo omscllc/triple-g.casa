@@ -2,6 +2,10 @@
 
 html {
   body {
+    .form-select {
+      height: 2.7rem;
+    }
+
     input::placeholder {
       color: variables.$color-gray;
     }
@@ -19,18 +23,18 @@ html {
     }
 
     .webform-submission-form {
-      & input,
-      & textarea {
+      input,
+      textarea {
         color: variables.$color-black;
+        font-size: 1rem;
+        padding: 0.5rem 0 0.5rem 0.3rem;
       }
     }
 
     .iti {
-      & input,
-      &__country-name,
-      &__dial-code {
-        color: variables.$color-black;
-      }
+    //  & input,
+
+
 
 
 
@@ -44,12 +48,6 @@ html {
       &__selected-flag {
         padding: 0;
         flex-direction: row-reverse;
-      }
-
-      &--allow-dropdown input,
-      &--allow-dropdown input[type=tel],
-      &--allow-dropdown input[type=text], {
-        padding: 0 .38rem 0 2.5rem;
       }
     }
   }
