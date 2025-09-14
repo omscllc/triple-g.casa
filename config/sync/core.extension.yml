@@ -34,6 +34,7 @@ module:
   ckeditor5_premium_features: 0
   ckeditor5_premium_features_wproofreader: 0
   ckeditor_details: 0
+  conditional_fields: 0
   config: 0
   config_ignore: 0
   contact: 0
