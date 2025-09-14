@@ -1,5 +1,11 @@
+@use "variables";
+
 html {
   body {
+    input::placeholder {
+      color: variables.$color-gray;
+    }
+
     .tg {
       &-left {
         float: left;
@@ -9,6 +15,41 @@ html {
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      }
+    }
+
+    .webform-submission-form {
+      & input,
+      & textarea {
+        color: variables.$color-black;
+      }
+    }
+
+    .iti {
+      & input,
+      &__country-name,
+      &__dial-code {
+        color: variables.$color-black;
+      }
+
+
+
+
+      &__flag {
+        box-shadow: unset;
+        background-color: transparent;
+        margin-left: .1rem;
+      }
+
+      &__selected-flag {
+        padding: 0;
+        flex-direction: row-reverse;
+      }
+
+      &--allow-dropdown input,
+      &--allow-dropdown input[type=tel],
+      &--allow-dropdown input[type=text], {
+        padding: 0 .38rem 0 2.5rem;
       }
     }
   }
