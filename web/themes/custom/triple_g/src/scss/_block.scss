@@ -256,6 +256,7 @@ body {
       &-copyright {
         text-align: center;
       }
+
       &-page {
         &-title {
           .page-title {
@@ -332,7 +333,7 @@ body {
 
               &-state {
                 &-active {
-                  border: 1px solid white;
+                  color: variables.$link-color
                 }
               }
 

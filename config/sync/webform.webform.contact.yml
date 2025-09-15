@@ -31,6 +31,7 @@ elements: |-
   telephone:
     '#type': webform_telephone
     '#title': Telephone
+    '#ext__access': false
     '#phone__international_initial_country': auto
   subject:
     '#title': Subject
