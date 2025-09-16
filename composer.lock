@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ac421a4ac19942716fbec11ae5f6ec2",
+    "content-hash": "d21ed086e1d7d3d0f246c4b3003cf4a6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1948,6 +1948,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore"
+            }
+        },
+        {
+            "name": "drupal/convert_bundles",
+            "version": "3.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/convert_bundles.git",
+                "reference": "3.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/convert_bundles-3.0.0-alpha1.zip",
+                "reference": "3.0.0-alpha1",
+                "shasum": "c90eabe0ad5e43967a0c1d65fc71ea1f187c5978"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-alpha1",
+                    "datestamp": "1748448887",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "el1_1el",
+                    "homepage": "https://www.drupal.org/user/1795292"
+                },
+                {
+                    "name": "joseph.olstad",
+                    "homepage": "https://www.drupal.org/user/1321830"
+                }
+            ],
+            "description": "Convert entity bundles from one value to another",
+            "homepage": "https://www.drupal.org/project/convert_bundles",
+            "support": {
+                "source": "https://git.drupalcode.org/project/convert_bundles"
             }
         },
         {
@@ -17838,6 +17886,7 @@
     "stability-flags": {
         "drupal/ckeditor_details": 10,
         "drupal/conditional_fields": 15,
+        "drupal/convert_bundles": 15,
         "drupal/layout_library": 10
     },
     "prefer-stable": true,

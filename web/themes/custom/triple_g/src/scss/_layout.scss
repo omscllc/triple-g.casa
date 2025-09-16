@@ -255,12 +255,16 @@ html {
 
     dialog {
       background: variables.$background-color;
-      max-width: 90vw;
-      max-height: 85vh;
+      max-width: 90dvw;
+      max-height: 85dvh;
       border: .2rem solid variables.$navbar-color;
       filter: drop-shadow(.2rem .2rem .3rem variables.$color-black);
 
       @media screen and (min-width: 992px) {
+        max-width: 70dvw;
+      }
+
+      @media screen and (min-width: 1200px) {
         max-width: 70vw;
       }
 

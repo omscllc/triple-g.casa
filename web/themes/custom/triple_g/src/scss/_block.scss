@@ -332,7 +332,7 @@ body {
               }
 
               &-state {
-                &-active {
+                &-active * {
                   color: variables.$link-color
                 }
               }
