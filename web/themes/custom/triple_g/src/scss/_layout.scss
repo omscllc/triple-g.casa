@@ -2,6 +2,7 @@
 
 html {
   body {
+    background-color: variables.$background-color;
     color: variables.$font-color;
     font-family: variables.$body-font;
     font-size: variables.$body-font-size;
@@ -160,6 +161,7 @@ html {
         }
       }
     }
+
     p {
       color: variables.$font-color;
     }
@@ -180,7 +182,7 @@ html {
     #sidebar-first {
       height: 7rem;
       width: 100vh;
-      box-shadow: 0px 0px 26px 0px black;
+      box-shadow: 0 0 26px 0 black;
       background-image: url('/themes/custom/triple_g/triple-g-background.png');
       position: relative;
       display: flex;
@@ -248,6 +250,7 @@ html {
       cursor: pointer;
       color: variables.$alt-title-color;
     }
+
     p.teaser-container {
       display: inline-flex;
       align-items: baseline;
@@ -268,7 +271,6 @@ html {
         max-width: 70vw;
       }
 
-
       p.close-modal-container {
         display: inline-flex;
         justify-content: center;
@@ -285,11 +287,6 @@ html {
     }
 
     .contact-me {
-      //display: flex;
-      //gap: 1rem;
-      //flex-wrap: wrap;
-      //justify-content: space-between;
-      //flex-direction: column;
       .parent {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -297,8 +294,6 @@ html {
         grid-column-gap: 1.5rem;
         grid-row-gap: 1.5rem;
       }
-
-
     }
 
     li.ui-tabs-tab:not(.ui-tabs-active) {

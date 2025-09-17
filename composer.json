@@ -88,7 +88,7 @@
         "drush/drush": "^13.6",
         "dweineratl/entity_type_clone": "^99.0",
         "mglaman/composer-drupal-lenient": "^1.0",
-        "omscllc/clean_blog_theme": "^2.0",
+        "omscllc/clean_blog_theme": "dev-develop",
         "predis/predis": "^3.2",
         "ramsey/uuid": "^4.9",
         "symfony/uid": "^7.3",
