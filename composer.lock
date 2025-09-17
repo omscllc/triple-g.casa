@@ -7743,7 +7743,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/omscllc/clean_blog_theme",
-                "reference": "c14039e6a360c919ae3e8389bfc87b251811eb5a"
+                "reference": "2fe8c5d891ef38db1ed8a77f435dc4cb674763c6"
             },
             "require": {
                 "drupal/classy": "^2.0",
@@ -7758,7 +7758,7 @@
                 }
             ],
             "description": "A clean blog theme forked from drupal/d8_blog_theme",
-            "time": "2025-09-16T21:10:55+00:00"
+            "time": "2025-09-17T04:40:47+00:00"
         },
         {
             "name": "pear/archive_tar",
