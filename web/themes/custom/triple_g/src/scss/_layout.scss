@@ -292,8 +292,37 @@ dialog {
 .ui-tabs-tab:not(.ui-tabs-active) {
   transition: transform .3s ease-in-out;
 
-  a:hover {
-    color: variables.$navbar-color;
-    transform: scale(1.05);
-  }
+  //a:hover {
+  //  color: variables.$navbar-color;
+  //  transform: scale(1.05);
+  //}
+}
+
+.active-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  position: relative;
+  padding-left: 1.5em;
+  line-height: inherit;
+}
+
+.active-link::before {
+  font-family: 'Font Awesome 7 Free';
+  content: "\f0da"; // fa-angle-right
+  font-weight: 900;
+  position: absolute;
+  left: -1.25rem;
+  top: 48%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+  speak: none;
+}
+
+.item-title h2 {
+  font-family: variables.$fancy-font;
 }

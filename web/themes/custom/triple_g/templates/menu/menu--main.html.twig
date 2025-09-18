@@ -31,20 +31,24 @@
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" data-bs-popper="static">
           {% endif %}
           {% for item in items %}
+            {% set link_classes = ['dropdown-item'] %}
+            {% if item.in_active_trail %}
+              {% set link_classes = link_classes|merge(['active-link']) %}
+            {% endif %}
             {% if item.below %}
               {% if menu_level == 0 %}
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" {{ item.attributes }}>
                   <a href="{{ item.url }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ item.title }}</a>
                   {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                 </li>
               {% else %}
-                <li class="nav-item dropdown-submenu">
+                <li class="nav-item dropdown-submenu" {{ item.attributes }}>
                   <a href="{{ item.url }}">{{ item.title }}</a>
                   {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
                 </li>
               {% endif %}
             {% else %}
-              <li class="nav-item" {{ item.attributes }}>{{ link(item.title, item.url, create_attribute({'class': ['dropdown-item']})) }}</li>
+              <li class="nav-item" {{ item.attributes }}>{{ link(item.title, item.url, create_attribute({'class': link_classes})) }}</li>
             {% endif %}
           {% endfor %}
         </ul>

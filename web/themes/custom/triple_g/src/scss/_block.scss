@@ -132,7 +132,7 @@
                         font-size: variables.$body-font-size;
                         display: block;
                         width: 100%;
-                        padding: 0.5rem 1rem;
+                        padding: 0.5rem 1.4rem;
                         text-decoration: none;
                         background-color: transparent;
                         border: none;
@@ -166,9 +166,25 @@
           }
 
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
           }
         }
+      }
+
+      .active-link::before {
+        font-family: 'Font Awesome 7 Free';
+        content: "\f0da"; // fa-angle-right
+        font-weight: 900;
+        position: absolute;
+        left: 0.25rem;
+        top: 48%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 1em;
+        text-align: center;
+        pointer-events: none;
+        z-index: 1;
+        speak: none;
       }
     }
 
