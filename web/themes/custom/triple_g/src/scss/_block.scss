@@ -171,12 +171,29 @@
         }
       }
 
-      .active-link::before {
+      li ul li a.active-link::before {
         font-family: 'Font Awesome 7 Free';
         content: "\f0da"; // fa-angle-right
         font-weight: 900;
         position: absolute;
         left: 0.25rem;
+        top: 48%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 1em;
+        text-align: center;
+        pointer-events: none;
+        z-index: 1;
+        speak: none;
+      }
+
+      // Top level menu active link arrow
+      li a.active-link::before {
+        font-family: 'Font Awesome 7 Free';
+        content: "\f0da"; // fa-angle-right
+        font-weight: 900;
+        position: absolute;
+        left: -1.25rem;
         top: 48%;
         transform: translateY(-50%);
         display: inline-block;

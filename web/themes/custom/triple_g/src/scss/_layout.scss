@@ -307,22 +307,12 @@ dialog {
   line-height: inherit;
 }
 
-.active-link::before {
-  font-family: 'Font Awesome 7 Free';
-  content: "\f0da"; // fa-angle-right
-  font-weight: 900;
-  position: absolute;
-  left: -1.25rem;
-  top: 48%;
-  transform: translateY(-50%);
-  display: inline-block;
-  width: 1em;
-  text-align: center;
-  pointer-events: none;
-  z-index: 1;
-  speak: none;
-}
-
 .item-title h2 {
   font-family: variables.$fancy-font;
+}
+
+.code {
+  background-color: lightgrey;
+  color: black;
+  font-size: 0.99rem;
 }
