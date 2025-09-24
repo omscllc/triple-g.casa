@@ -1,7 +1,11 @@
 js_all: none
-css_all: none
+css_all: defer
 libraries:
   defer:
+    - css_all
+    - core/components.olivero--teaser
+    - core/components.all
+    - core/internal.backbone
     - core/ckeditor5
     - core/ckeditor5.editorClassic
     - core/ckeditor5.editorDecoupled
