@@ -81,6 +81,7 @@
         "drupal/no_nbsp": "^1.7",
         "drupal/pathauto": "^1.13",
         "drupal/redis": "^1.10",
+        "drupal/resource_hints": "^1.0@alpha",
         "drupal/social_media_links": "^2.10",
         "drupal/splide": "^2.0",
         "drupal/superfish": "^1.13",

@@ -112,6 +112,7 @@ module:
   path_alias: 0
   photoswipe: 0
   redis: 0
+  resource_hints: 0
   search: 0
   shortcut: 0
   social_media_links: 0
