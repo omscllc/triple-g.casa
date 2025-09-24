@@ -3,6 +3,7 @@ _core:
 module:
   backward_compatibility: -1000
   admin_toolbar: 0
+  agg_jscss_asyncdefer: 0
   automated_cron: 0
   blazy: 0
   block: 0

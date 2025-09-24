@@ -26,6 +26,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/agg_jscss_asyncdefer": "^1.0",
         "drupal/backward_compatibility": "^1.0",
         "drupal/ckeditor5_icons": "^1.2",
         "drupal/ckeditor5_plugin_pack": "^1.4",
