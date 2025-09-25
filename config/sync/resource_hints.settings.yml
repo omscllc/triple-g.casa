@@ -1,26 +1,24 @@
 _core:
   default_config_hash: 7Ci5WV_MlZhBIjBCTGYghRIXmk1Aq28aAkhjjfmc_F0
-dns_prefetch_output: 1
+dns_prefetch_output: 0
 dns_prefetch_resources:
   - ''
 dns_prefetch_control: 'on'
-preconnect_output: 1
+preconnect_output: 0
 preconnect_resources:
-  - 'https://fonts.googleapis.com'
-prefetch_output: 1
+  - 'https://kit.fontawesome.com/'
+prefetch_output: 0
 prefetch_resources:
+  - "/portfolio\r"
+  - "/contact\r"
+  - "/gadgets\r"
+  - "/gizmos\r"
+  - "/about-me\r"
+  - "/resume\r"
   - "/themes/custom/triple_g/css/triple_g.min.css\r"
-  - "/themes/custom/triple_g/fontawesome/webfonts/fa-solid-900.woff2\r"
-  - "/themes/custom/triple_g/fontawesome/webfonts/fa-regular-400.woff2\r"
-  - "/themes/custom/triple_g/fonts/PermanentMarker-Regular.ttf\r"
-  - "/themes/custom/triple_g/fonts/Roboto-VariableFont_wdth,wght.ttf\r"
-  - "/themes/custom/triple_g/fonts/FontdinerSwanky-Regular.ttf\r"
-  - "/themes/contrib/clean_blog_theme/includes/bootstrap/css/bootstrap.min.css\r"
-  - "/themes/contrib/clean_blog_theme/includes/fontawesome/css/all.min.css\r"
-  - "/themes/contrib/clean_blog_theme/includes/fontawesome/fa-brands-400.woff2\r"
-  - "/themes/contrib/clean_blog_theme/includes/fontawesome/fa-solid-900.woff2\r"
+  - "/themes/custom/triple_g/js/triple_g.min.js\r"
   - "/themes/contrib/clean_blog_theme/css/style.min.css\r"
-  - ''
+  - /themes/contrib/clean_blog_theme/js/script.min.js
 prerender_output: 0
 prerender_resources:
   - ''

@@ -232,6 +232,7 @@ p {
   height: 9rem;
   max-height: 9rem;
   margin-top: auto;
+  background: #000;
 }
 
 .ept-accordion-plus_minus_left .ui-accordion .ui-accordion-header.ui-state-active::before {
@@ -315,4 +316,16 @@ code {
   background-color: lightgrey;
   color: black;
   font-size: 0.99rem;
+}
+
+.gin-breadcrumb, .breadcrumb {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: inherit;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.gin-main-content, main {
+  margin-top: 3.5rem; // Adjust to match breadcrumb height
 }

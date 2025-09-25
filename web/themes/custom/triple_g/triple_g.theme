@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-//const SLIDESHOW_COUNT = 5;
+const SLIDESHOW_COUNT = 3;
 
 use Drupal\file\Entity\File;
 use Drupal\file\FileInterface;
@@ -47,32 +47,6 @@ function triple_g_preprocess_page(&$vars): void
         'src' => $image_path,
         'title' => theme_get_setting("slide_title_$i"),
       );
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-function triple_g_preprocess_node(array &$variables): void {
-  $user = $variables['node']->getOwner();
-  $name = $user->field_display_name->value;
-  $profile_alias = Drupal::service('path_alias.manager')->getAliasByPath('/user/' . $user->id());
-  $variables['author_name'] = $name;
-  $variables['profile_alias'] = $profile_alias;
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function triple_g_preprocess_page_title(&$variables): void
-{
-  if (Drupal::routeMatch()->getRouteName() === 'entity.user.canonical') {
-    /** @var Drupal\user\Entity\User $user */
-    $user = Drupal::routeMatch()->getParameter('user');
-
-    if ($user && $user->hasField('field_display_name') && !empty($user->get('field_display_name'))) {
-      $variables['title'] = $user->get('field_display_name')->value;
     }
   }
 }
