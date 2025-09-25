@@ -12,3 +12,8 @@ two_column_64_33:
   css:
     layout:
       layouts/two-column/two-column-64-33.css: {}
+
+google_fonts:
+  css:
+    theme:
+      https://fonts.googleapis.com/css2?family=Federo&family=Fontdiner+Swanky&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap: { type: external }

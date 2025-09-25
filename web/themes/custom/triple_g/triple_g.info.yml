@@ -6,6 +6,8 @@ package: Custom
 core_version_requirement: ^10 || ^11
 libraries:
   - triple_g/global
+  - triple_g/google_fonts
+  - triple_g/two_column_64_33
 regions:
   header: 'Header'
   primary_menu: 'Primary menu'
