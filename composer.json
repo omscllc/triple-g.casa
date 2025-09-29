@@ -87,6 +87,7 @@
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/twig_tweak": "^3.4",
+        "drupal/views_bulk_operations": "^4.3",
         "drush/drush": "^13.6",
         "dweineratl/entity_type_clone": "^99.0",
         "mglaman/composer-drupal-lenient": "^1.0",

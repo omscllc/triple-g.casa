@@ -489,7 +489,7 @@ $settings['update_free_access'] = FALSE;
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_assets_path'] = 'sites/default/files';
+//$settings['file_assets_path'] = 'assets';
 
 /**
  * Public file base URL:
@@ -843,8 +843,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
+
+// Override the logo path for 'triple_g' theme.
+$config['triple_g.settings']['logo']['use_default'] = FALSE;
+$config['triple_g.settings']['logo']['path'] = '/assets/theme/logo.png.webp';
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-
-

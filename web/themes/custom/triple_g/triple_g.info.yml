@@ -4,6 +4,7 @@ base theme: clean_blog_theme
 description: Triple G is a sub theme of Clean Blog Theme to allow for the overriding of some of the design choices
 package: Custom
 core_version_requirement: ^10 || ^11
+logo: /assets/theme/logo.png.webp
 libraries:
   - triple_g/global
   - triple_g/google_fonts
