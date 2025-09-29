@@ -844,6 +844,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
+$settings['config_sync_directory'] = '../config/sync';
+
 // Override the logo path for 'triple_g' theme.
 $config['triple_g.settings']['logo']['use_default'] = FALSE;
 $config['triple_g.settings']['logo']['path'] = '/assets/theme/logo.png.webp';
