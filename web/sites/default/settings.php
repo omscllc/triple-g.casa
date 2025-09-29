@@ -848,6 +848,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 $config['triple_g.settings']['logo']['use_default'] = FALSE;
 $config['triple_g.settings']['logo']['path'] = '/assets/theme/logo.png.webp';
 
+// Set the public file path to 'assets/'.
+$settings['file_public_path'] = 'assets';
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
