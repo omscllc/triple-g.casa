@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_tiles.field_ept_title
     - paragraphs.paragraphs_type.ept_tiles
   module:
-    - ept_tiles
+    - ept_core
     - field_group
     - paragraphs
     - text
@@ -70,8 +70,8 @@ bundle: ept_tiles
 mode: default
 content:
   field_ept_settings:
-    type: ept_settings_tiles
-    weight: 11
+    type: ept_settings_default
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }

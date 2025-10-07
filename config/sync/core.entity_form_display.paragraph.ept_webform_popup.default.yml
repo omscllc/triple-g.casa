@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_webform_popup.field_ept_webform_popup_form
     - paragraphs.paragraphs_type.ept_webform_popup
   module:
-    - ept_webform_popup
+    - ept_core
     - text
     - webform
 _core:
@@ -20,8 +20,8 @@ bundle: ept_webform_popup
 mode: default
 content:
   field_ept_settings:
-    type: ept_settings_webform_popup
-    weight: 3
+    type: ept_settings_default
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

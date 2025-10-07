@@ -12,7 +12,7 @@ dependencies:
     - field.field.paragraph.ept_hero.field_ept_title
     - paragraphs.paragraphs_type.ept_hero
   module:
-    - ept_hero
+    - ept_core
     - field_group
     - link
     - media_library
@@ -108,8 +108,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_hero
-    weight: 4
+    type: ept_settings_default
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

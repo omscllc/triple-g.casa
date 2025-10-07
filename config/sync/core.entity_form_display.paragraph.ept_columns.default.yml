@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_columns.field_ept_title
     - paragraphs.paragraphs_type.ept_columns
   module:
-    - ept_columns
+    - ept_core
     - field_group
     - paragraphs
     - text
@@ -88,8 +88,8 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_columns
-    weight: 4
+    type: ept_settings_default
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

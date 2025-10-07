@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_basic_button.field_ept_title
     - paragraphs.paragraphs_type.ept_basic_button
   module:
-    - ept_basic_button
+    - ept_core
     - link
     - text
 _core:
@@ -28,8 +28,8 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_basic_button
-    weight: 3
+    type: ept_settings_default
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

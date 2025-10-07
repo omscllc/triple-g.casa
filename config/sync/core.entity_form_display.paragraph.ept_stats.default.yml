@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_stats.field_ept_title
     - paragraphs.paragraphs_type.ept_stats
   module:
-    - ept_stats
+    - ept_core
     - field_group
     - paragraphs
     - text
@@ -70,8 +70,8 @@ bundle: ept_stats
 mode: default
 content:
   field_ept_settings:
-    type: ept_settings_stats
-    weight: 2
+    type: ept_settings_default
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

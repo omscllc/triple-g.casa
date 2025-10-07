@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_slick_slider.field_ept_title
     - paragraphs.paragraphs_type.ept_slick_slider
   module:
-    - ept_slick_slider
+    - ept_core
     - field_group
     - paragraphs
     - text
@@ -70,8 +70,8 @@ bundle: ept_slick_slider
 mode: default
 content:
   field_ept_settings:
-    type: ept_settings_slick_slider
-    weight: 2
+    type: ept_settings_default
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

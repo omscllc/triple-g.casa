@@ -10,7 +10,7 @@ dependencies:
     - field.field.paragraph.ept_quote.field_ept_title
     - paragraphs.paragraphs_type.ept_quote
   module:
-    - ept_quote
+    - ept_core
     - field_group
     - media_library
     - text
@@ -87,8 +87,8 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_quote
-    weight: 2
+    type: ept_settings_default
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

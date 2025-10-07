@@ -9,7 +9,7 @@ dependencies:
     - field.field.paragraph.ept_micromodal.field_ept_title
     - paragraphs.paragraphs_type.ept_micromodal
   module:
-    - ept_micromodal
+    - ept_core
     - field_group
     - text
 third_party_settings:
@@ -77,8 +77,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_micromodal
-    weight: 3
+    type: ept_settings_default
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9d9e96609a3ee6dd709c938d8cc4e0e",
+    "content-hash": "85aad40da360cf462b10fd1e7d6e6171",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5450,6 +5450,55 @@
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_report",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_report.git",
+                "reference": "2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_report-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "e16695f614de72d8a3e6974eba3af494ea48162e"
+            },
+            "require": {
+                "drupal/core": "^10.2.0 || ^11",
+                "drupal/paragraphs": "^1.10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.1",
+                    "datestamp": "1730204677",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "aisforaaron",
+                    "homepage": "https://www.drupal.org/user/116113"
+                },
+                {
+                    "name": "generalredneck",
+                    "homepage": "https://www.drupal.org/user/368854"
+                }
+            ],
+            "description": "Get an inventory of paragraphs in use.",
+            "homepage": "https://www.drupal.org/project/paragraphs_report",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_report"
             }
         },
         {

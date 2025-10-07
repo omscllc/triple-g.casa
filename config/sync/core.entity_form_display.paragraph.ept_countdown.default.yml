@@ -10,7 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.ept_countdown
   module:
     - datetime
-    - ept_countdown
+    - ept_core
     - field_group
     - text
 third_party_settings:
@@ -76,8 +76,8 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_countdown
-    weight: 0
+    type: ept_settings_default
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }

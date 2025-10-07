@@ -52,30 +52,10 @@ module:
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
-  ept_accordion: 0
-  ept_basic_button: 0
-  ept_block: 0
-  ept_bootstrap_button: 0
-  ept_carousel: 0
-  ept_columns: 0
   ept_core: 0
-  ept_core_starterkit: 0
-  ept_countdown: 0
-  ept_counter: 0
-  ept_cta: 0
-  ept_hero: 0
-  ept_micromodal: 0
-  ept_quote: 0
-  ept_slick_slider: 0
   ept_slideshow: 0
-  ept_stats: 0
   ept_tabs: 0
   ept_text: 0
-  ept_tiles: 0
-  ept_timeline: 0
-  ept_views: 0
-  ept_webform: 0
-  ept_webform_popup: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -112,6 +92,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_report: 0
   path: 0
   path_alias: 0
   redis: 0

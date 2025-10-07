@@ -11,7 +11,7 @@ dependencies:
     - field.field.paragraph.ept_cta.field_ept_title
     - paragraphs.paragraphs_type.ept_cta
   module:
-    - ept_cta
+    - ept_core
     - field_group
     - link
     - media_library
@@ -98,8 +98,8 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_ept_settings:
-    type: ept_settings_cta
-    weight: 2
+    type: ept_settings_default
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
