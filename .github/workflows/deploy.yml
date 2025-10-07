@@ -4,9 +4,6 @@ on:
   push:
     branches: ['develop']
   workflow_dispatch:
-env:
-  SCANNER_ARGS: |
-    --exclude-files config/*
 
 jobs:
   check-secrets:
@@ -17,10 +14,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Secret Scanner
         uses: secret-scanner/action@0.0.2
-        with:
-          detect-secret-additional-args: ${{ env.SCANNER_ARGS }}
 
   deploy:
+    needs: check-secrets
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to staging
