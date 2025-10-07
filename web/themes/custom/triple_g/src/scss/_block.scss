@@ -245,6 +245,7 @@
         }
 
         .site-logo {
+          aspect-ratio: 1 / 1;
           width: 6rem;
           min-width: auto;
           height: auto;
@@ -258,7 +259,7 @@
           }
 
           @media screen and (min-width: 1400px) {
-            width: auto;
+            width: 10rem;
             max-height: 10rem;
             max-width: 10rem;
             margin-left: 0;

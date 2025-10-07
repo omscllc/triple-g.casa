@@ -1,0 +1,54 @@
+# Dependencies
+**/node_modules/**
+**/vendor/**
+**/web/core/**
+**/web/libraries/**
+**/web/modules/contrib/**
+**/web/profiles/contrib/**
+**/web/themes/contrib/**
+**/web/sites/*/files/**
+
+# Build artifacts
+**/*.min.js
+**/*.min.css
+**/*.build.js
+
+# Drupal core and contrib JS - too many issues, not our code
+**/web/core/**
+**/web/modules/contrib/**
+**/web/themes/contrib/**
+
+# Theme files - we'll lint these separately if needed
+**/web/themes/custom/**
+
+# Vendor files - third party code
+**/vendor/**
+
+# Build directories
+**/dist/**
+**/build/**
+
+# IDE specific files
+**/.idea/**
+**/.vscode/**
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+# Ignore compiled CKEditor 5 files
+web/modules/custom/drupal_cut_v2/js/plugins/drupalcut5/build/
+
+# Ignore all files by default, we'll whitelist what we want to check
+**/*
+
+# Only check specific directories
+!web/modules/custom/drupal_cut_v2/js/**/*.js
+!web/themes/custom/triple_g/src/js/**/*.js

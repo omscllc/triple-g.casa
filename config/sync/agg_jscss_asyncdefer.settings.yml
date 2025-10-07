@@ -2,4 +2,17 @@ js_all: none
 css_all: none
 libraries:
   defer:
+    - core/drupal.ajax
+    - core/drupal.dialog.ajax
+    - core/drupal.message
+    - core/drupal.progress
+    - core/drupal.textarea-resize
+    - core/drupal.tabledrag
+    - core/drupal.tabledrag.ajax
+    - core/drupal.tablesort
+    - core/drupal.vertical-tabs
+    - blazy/admin.tabs
+    - node/drupal.node
     - triple_g/two_column_64_33
+    - triple_g/google_fonts
+    - clean_blog_theme/flexslider-cdn
