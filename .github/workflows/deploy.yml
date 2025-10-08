@@ -19,7 +19,7 @@ jobs:
     needs: check-secrets
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to staging
+      - name: Checkout Repo
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ vars.DEPLOY_HOST }}
@@ -33,16 +33,82 @@ jobs:
             chmod -R u+w web/sites/default
             echo "Pulling latest code"
             git pull
+
+      - name: Backup Database
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ vars.DEPLOY_HOST }}
+          username: ${{ vars.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            set -euo pipefail
+            echo "Changing to deploy path"
+            cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Backing up database"
-            drush sql:dump > /var/www/db_backups/${{ vars.STG_BU_FILE_PREFIX }}.$(date +'%Y-%m-%d_%H:%M:%S').sql
+            drush sql:dump > "/var/www/db_backups/${{ vars.STG_BU_FILE_PREFIX }}.$(date +'%Y-%m-%d_%H:%M:%S').sql"
+
+      - name: Install Composer Dependencies
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ vars.DEPLOY_HOST }}
+          username: ${{ vars.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            set -euo pipefail
+            echo "Changing to deploy path"
+            cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Installing composer dependencies"
             composer install
-            echo "Installing npm dependencies"
-            npm install
-            echo "Building assets"
-            npm run build
-            echo "Cleaning up node_modules"
-            rm -rf node_modules
+
+      - name: Install NPM Dependencies
+        uses: appleboy/ssh-action@v1
+        with:
+            host: ${{ vars.DEPLOY_HOST }}
+            username: ${{ vars.DEPLOY_USER }}
+            key: ${{ secrets.DEPLOY_KEY }}
+            script: |
+              set -euo pipefail
+              echo "Changing to deploy path"
+              cd ${{ vars.STG_DEPLOY_PATH }}
+              echo "Installing npm dependencies"
+              npm install
+
+      - name: Build Assets
+        uses: appleboy/ssh-action@v1
+        with:
+            host: ${{ vars.DEPLOY_HOST }}
+            username: ${{ vars.DEPLOY_USER }}
+            key: ${{ secrets.DEPLOY_KEY }}
+            script: |
+              set -euo pipefail
+              echo "Changing to deploy path"
+              cd ${{ vars.STG_DEPLOY_PATH }}
+              echo "Building assets"
+              npm run build
+
+      - name: Clean up node_modules
+        uses: appleboy/ssh-action@v1
+        with:
+            host: ${{ vars.DEPLOY_HOST }}
+            username: ${{ vars.DEPLOY_USER }}
+            key: ${{ secrets.DEPLOY_KEY }}
+            script: |
+              set -euo pipefail
+              echo "Changing to deploy path"
+              cd ${{ vars.STG_DEPLOY_PATH }}
+              echo "Cleaning up node_modules"
+              rm -rf node_modules
+
+      - name: Run Drush Commands
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ vars.DEPLOY_HOST }}
+          username: ${{ vars.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            set -euo pipefail
+            echo "Changing to deploy path"
+            cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Clearing Drupal cache"
             drush cr
             echo "Importing config"
@@ -51,4 +117,4 @@ jobs:
             drush updb -y
             echo "Final cache clear"
             drush cr
-            echo "Site deployed to staging"
+

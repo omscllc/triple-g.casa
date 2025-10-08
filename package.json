@@ -43,8 +43,5 @@
     "postcss-cli": "^10.1.0",
     "sass": "^1.89.2",
     "terser": "^5.43.1"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.0"
   }
 }
