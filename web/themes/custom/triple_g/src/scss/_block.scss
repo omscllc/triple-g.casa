@@ -10,46 +10,6 @@
         position: relative;
       }
 
-      .navbar {
-        &.navbar-expand-lg {
-          display: block;
-          width: 100%;
-          padding: 0;
-          margin: 0;
-          background-color: transparent;
-          border: none;
-
-          .container-fluid {
-            display: block;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            position: relative;
-
-            .navbar-toggler {
-              position: absolute;
-              top: 0.5rem;
-              right: 1rem;
-              margin-top: 0; // overridden by positioning
-              z-index: 1060; // above the collapsing menu
-            }
-          }
-        }
-
-        &-collapse {
-          background-color: variables.$title-color;
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 2.75rem;
-
-          @media screen and (min-width: 992px) {
-            background-color: unset;
-            padding-top: 0;
-            padding-left: 0;
-          }
-        }
-      }
-
       ul {
         &.navbar-nav {
           display: flex;
