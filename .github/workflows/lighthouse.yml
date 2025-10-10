@@ -7,7 +7,7 @@ on:
     workflows:
       - "Triple G build and deploy"
     types:
-        - completed
+      - completed
 
 jobs:
     lighthouse-ci:
