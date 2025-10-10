@@ -1,5 +1,18 @@
 @use "variables";
 
+/* Fallback for older browsers */
+html {
+  overflow-y: scroll;
+}
+
+/* Modern approach for supported browsers */
+@supports (scrollbar-gutter: stable) {
+  html {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+}
+
 body {
   background-color: variables.$background-color;
   color: variables.$font-color;
