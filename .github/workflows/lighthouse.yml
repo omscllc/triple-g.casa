@@ -1,4 +1,6 @@
 name: Run Lighthouse CI
+permissions:
+  contents: read
 
 on:
   workflow_run:
