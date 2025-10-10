@@ -10,7 +10,7 @@ on:
 jobs:
     lighthouse-ci:
       runs-on: ubuntu-latest
-      if: github.event.workflow_run.conclusion == 'success' && github.event.pull_request.merged == true
+      if: github.event.workflow_run.conclusion == 'success'
       steps:
         - name: Run Lighthouse CI
           uses: appleboy/ssh-action@v1
