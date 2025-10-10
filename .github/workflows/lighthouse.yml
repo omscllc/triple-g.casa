@@ -29,7 +29,7 @@ jobs:
             cd "${{ vars.STG_DEPLOY_PATH }}"
             echo "Setting LHCI token"
             sed s/"-storage',"/"-storage', githubAppToken: ${LHCI_GITHUB_APP_TOKEN},"/ lighthouserc.js > .lighthouserc.js
-            echo "Running Lighthouse CI"
+            echo "Running Lighthouse CI on Home page"
             lhci autorun
             echo "Cleaning up"
             rm .lighthouserc.js
