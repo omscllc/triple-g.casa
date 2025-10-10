@@ -16,12 +16,11 @@ jobs:
     steps:
       - name: Run Lighthouse CI
         uses: appleboy/ssh-action@v1
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         with:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          envs: LHCI_GITHUB_APP_TOKEN
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
