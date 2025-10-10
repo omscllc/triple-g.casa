@@ -1,22 +1,14 @@
 name: Triple G build and deploy
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: ['develop']
   workflow_dispatch:
 
 jobs:
-  check-secrets:
-    name: Checking for Secrets
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-      - name: Secret Scanner
-        uses: secret-scanner/action@0.0.2
-
   deploy:
-    needs: check-secrets
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -117,4 +109,3 @@ jobs:
             drush updb -y
             echo "Final cache clear"
             drush cr
-
