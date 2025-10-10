@@ -27,7 +27,6 @@ jobs:
             set -euo pipefail
             echo "Changing to deploy path"
             cd "${{ vars.STG_DEPLOY_PATH }}"
-            echo "Setting LHCI token"
             echo "Running Lighthouse CI on Home page"
             lhci autorun
             echo "Cleaning up"
