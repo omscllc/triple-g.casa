@@ -20,10 +20,14 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          envs: LHCI_GITHUB_APP_TOKEN
+          envs: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
             cd "${{ vars.STG_DEPLOY_PATH }}"
+            echo "Setting LHCI token"
+            sed s/"-storage',"/"-storage', githubAppToken: '${{ secrets.LHCI_GITHUB_APP_TOKEN }}',"/ lighthouserc.js > .lighthouserc.js
             echo "Running Lighthouse CI"
-            lhci autorun --upload.github.appToken=$LHCI_GITHUB_APP_TOKEN
+            lhci autorun
+            echo "Cleaning up"
+            rm .lighthouserc.js
