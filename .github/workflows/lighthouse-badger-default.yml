@@ -18,7 +18,7 @@ env:
   TOKEN_NAME: 'LIGHTHOUSE_BADGER_TOKEN'# target token name; insert only the name never the real value e.g. 'LIGHTHOUSE_BADGER_TOKEN'
   # If any of the following env is blank, a default value is used instead
   REPO_BRANCH: '${{ github.repository }} ${{ github.ref_name }}' # target repository & branch e.g. 'dummy/mytargetrepo main'
-  BADGES_ARGS: '-b plastic -l "Lighthouse"' # badge-style '-b {flat,...}', preceding-label '-l "Lighthouse "', output-path '-o lighthouse_results/dummy', save-report '-r', single-badge '-s'
+  BADGES_ARGS: '-b plastic -o lighthouse_results -r' # badge-style '-b {flat,...}', preceding-label '-l "Lighthouse "', output-path '-o lighthouse_results/dummy', save-report '-r', single-badge '-s'
   AUDIT_TYPE: 'desktop' # 'mobile', 'desktop', 'both' or 'both_p'
 
   # THAT'S IT; JUMP TO THE TRIGGERS;
