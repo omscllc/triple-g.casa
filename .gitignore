@@ -214,3 +214,8 @@ CRUSH.md
 /web/libraries
 /web/assets
 /web/themes/custom/triple_g/css/triple_g.post.min.css
+
+.lighthouseci/
+.lighthouseci/* # ignore everything in the folder
+
+

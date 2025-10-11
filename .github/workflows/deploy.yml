@@ -89,7 +89,8 @@ jobs:
             echo "Changing to deploy path"
             cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Cleaning up node_modules"
-            rm -rf node_modules package-lock.json .lighthouse*
+            rm -rf node_modules
+            git restore package-lock.json
 
       - name: Run Drush Commands
         uses: appleboy/ssh-action@v1
