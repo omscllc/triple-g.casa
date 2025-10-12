@@ -844,6 +844,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 #
 
+$config['image.settings']['allow_insecure_derivatives'] = TRUE;
+$config['image.settings']['suppress_itok_output'] = TRUE;
+
 $settings['config_sync_directory'] = '../config/sync';
 
 // Override the logo path for 'triple_g' theme.
@@ -852,6 +855,13 @@ $config['triple_g.settings']['logo']['path'] = '/assets/theme/logo.png.webp';
 
 // Set the public file path to 'assets/'.
 $settings['file_public_path'] = 'assets';
+
+# If you're using a different local domain, you can add it to your settings.local.php file to redefine it.
+$settings['trusted_host_patterns'] = [
+  '^.+\.triple-g\.dev',
+  '^triple-g\.dev',
+  '^triple-g\.local',
+];
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
