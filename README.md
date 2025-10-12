@@ -1,5 +1,5 @@
 # Geek's Gadgets and Gizmos (Triple G)
-![Performance Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_performance.svg)
+![Performance Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_performance.svg) ![Accessibility Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_accessibility.svg) ![Best Practices Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_best-practices.svg) ![SEO Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_seo.svg) ![PWA Rating](https://raw.githubusercontent.com/omscllc/triple-g.dev/develop/lighthouse_results/desktop/lighthouse_pwa.svg)
 
 Geek's Gadgets and Gizmos (Triple G) is the website for [David Weiner](mailto:thegeek@triple-g.dev) built using Drupal and a custom theme.
 
